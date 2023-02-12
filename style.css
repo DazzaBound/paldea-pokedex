@@ -8,14 +8,14 @@ body{
 	font-size: 36px;
 	font-family: "Nunito";
 	font-weight: 700;
-	background: #eee;
+	background: #fff;
 	margin: auto;
 	max-width: 960px;
 }
 header, footer{
 	position: sticky;
 	z-index: 2;
-	background: #eee
+	background: #fff;
 }
 header{
 	top: 0;
