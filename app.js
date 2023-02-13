@@ -4,13 +4,7 @@ const total = 400;
 for ( let i = 1; i <= total; i++){
 	displayList(i);
 }
-saveState = localStorage.getItem("save");
-	
-	for (let i = 0; i < saveState.length; i++) {
-		if (saveState.charAt(i) == "1") {
-			document.getElementById(i+1).classList.remove("grayOn");
-		}
-	}
+loadData();
 updateData();
 
 
@@ -37,5 +31,23 @@ function updateData(){
 			saveState += "1";
 		}
 	}
-	localStorage.setItem("save", saveState);
+	saveData();
+}
+
+function loadData(){
+	for (let i = 1; i <= total; i++){
+		if (localStorage.getItem("saveID"+i) == "false") {
+			document.getElementById(i).classList.remove("grayOn");
+		}
+	}
+}
+
+function saveData(){
+	for (let i = 1; i <= total; i++) {
+		if (document.getElementById(i).classList.contains("grayOn")) {
+			localStorage.setItem("saveID"+i, "true");
+		} else {
+			localStorage.setItem("saveID"+i, "false");
+		}
+	}
 }
