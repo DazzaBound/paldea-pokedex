@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-* {
-	color: black;
-}
 
+ul {
+	padding: 0;
+}
 body{
 	font-size: 36px;
 	font-family: "Nunito";
@@ -51,11 +51,22 @@ footer{
 #pokeList::after{
 	flex: auto;
 }
+#typeFilter{
+	display:flex;
+	color: white;
+	font-size: 11px;
+	font-weight: 500;
+
+}
+#typeFilter > div {
+	border: 2px solid rgba(255,255,255,0.3);
+	flex: 1;
+	margin: 1px;
+}
 .container{
 	display: flex;
 	flex-direction: column;
 	width: 100px;
-	/*height: 100px;*/
 	background: #b9ebb9;
 	border: 3px solid rgba(0,0,0,0.08);
 	border-radius: 10px;
@@ -84,9 +95,6 @@ footer{
 .grayOn img{
 	filter: grayscale(100%);
 }
-.grayon{
-	background: lightgray;
-}
 .types{
 	font-size: 11px;
 	font-weight: 500;
@@ -100,21 +108,29 @@ footer{
 	border: 2px solid rgba(255,255,255,0.3);
 
 }
-.textbug{background: #518300}
-.textdark{background: #433d4c}
-.textdragon{background: #0052a8}
-.textelectric{background: #907200}
-.textfairy{background: #a955a4}
-.textfighting{background: #b02352}
-.textfire{background: #cc4408}
-.textflying{background: #5776a5}
-.textghost{background: #33548f}
-.textgrass{background: #2b8721}
-.textground{background: #b85d2c}
-.textice{background: #1d8373}
-.textnormal{background: #6c767c}
-.textpoison{background: #904cac}
-.textpsychic{background: #cb4851}
-.textrock{background: #827649}
-.textsteel{background: #367489}
-.textwater{background: #2e78ba}
+.filterToggle{
+	display:none;
+}
+
+.textbug{background: #518300; transition: background-color 0.5s ease;}
+.textdark{background: #433d4c; transition: background-color 0.5s ease;}
+.textdragon{background: #0052a8; transition: background-color 0.5s ease;}
+.textelectric{background: #907200; transition: background-color 0.5s ease;}
+.textfairy{background: #a955a4; transition: background-color 0.5s ease;}
+.textfighting{background: #b02352; transition: background-color 0.5s ease;}
+.textfire{background: #cc4408; transition: background-color 0.5s ease;}
+.textflying{background: #5776a5; transition: background-color 0.5s ease;}
+.textghost{background: #33548f; transition: background-color 0.5s ease;}
+.textgrass{background: #2b8721; transition: background-color 0.5s ease;}
+.textground{background: #b85d2c; transition: background-color 0.5s ease;}
+.textice{background: #1d8373; transition: background-color 0.5s ease;}
+.textnormal{background: #6c767c; transition: background-color 0.5s ease;}
+.textpoison{background: #904cac; transition: background-color 0.5s ease;}
+.textpsychic{background: #cb4851; transition: background-color 0.5s ease;}
+.textrock{background: #827649; transition: background-color 0.5s ease;}
+.textsteel{background: #367489; transition: background-color 0.5s ease;}
+.textwater{background: #2e78ba; transition: background-color 0.5s ease;}
+
+.grayOn{
+	background: lightgray;
+}
