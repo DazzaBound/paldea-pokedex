@@ -20,6 +20,14 @@ header, footer{
 header{
 	top: 0;
 	padding: 5px 5px 0px 5px;
+	display: grid;
+	grid-template-columns: 4fr 3fr 0.8fr;
+	grid-column-gap: 5px;
+	padding: 5px 10px 5px 10px;
+	background: #b9ebb9;
+	border: 3px solid rgba(0,0,0,0.08);
+	border-radius: 10px;
+	text-align: center;
 }
 footer{
 	bottom: 0;
@@ -27,12 +35,7 @@ footer{
 
 }
 #title{
-	top: 5px;
-	padding: 10px;
-	background: #b9ebb9;
-	border: 3px solid rgba(0,0,0,0.08);
-	border-radius: 10px;
-	text-align: center;
+	align-self: center;
 }
 #credit{
 	font-size: 20px;
@@ -52,16 +55,33 @@ footer{
 	flex: auto;
 }
 #typeFilter{
-	display:flex;
+	display:grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(3, 1fr);
 	color: white;
 	font-size: 11px;
 	font-weight: 500;
 
 }
-#typeFilter > div {
+#toggleAll{
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	color: white;
+	font-size: 11px;
+	font-weight: 500;
+}
+#toggleAll > div, #typeFilter > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border: 2px solid rgba(255,255,255,0.3);
-	flex: 1;
 	margin: 1px;
+}
+#filterAllOn{
+	background: green;
+}
+#filterAllOff{
+	background: #222;
 }
 .container{
 	display: flex;
