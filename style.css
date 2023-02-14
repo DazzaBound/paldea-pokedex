@@ -43,7 +43,7 @@ footer{
 	background: #b9ebb9;
 }
 #pokeList{
-	margin: 5px;
+	margin: 10px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -51,29 +51,70 @@ footer{
 #pokeList::after{
 	flex: auto;
 }
-.pokeImg{
+.container{
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 60px;
-	height: 60px;
-	padding: 15px;
+	flex-direction: column;
+	width: 100px;
+	/*height: 100px;*/
 	background: #b9ebb9;
 	border: 3px solid rgba(0,0,0,0.08);
 	border-radius: 10px;
-	filter: grayscale:(100%);
-	transition: filter 0.5s ease;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
+	padding: 5px 1px 1px 1px;
+	filter: grayscale(0%);
+	transition: background-color 0.5s ease;
 	margin: 3px;
+	justify-content: center;
+	align-items: center;
 }
-.pokeImg img{
+.image{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	max-width: 100%;
-	max-height: 100%;
-
+	height: 70px;
+	transition: filter 0.5s ease;
+	object-fit: contain;
 }
-.grayOn{
+.info{
+	position: relative;
+	font-size: 15px;
+    text-align: center;
+	width: 100%;
+}
+.grayOn img{
 	filter: grayscale(100%);
 }
+.grayon{
+	background: lightgray;
+}
+.types{
+	font-size: 11px;
+	font-weight: 500;
+}
+.typeBox{
+	display: inline-block;
+	margin: 1px;
+	color: white;
+	width: 40%;
+	border-radius: 5px;
+	border: 2px solid rgba(255,255,255,0.3);
 
+}
+.textbug{background: #518300}
+.textdark{background: #433d4c}
+.textdragon{background: #0052a8}
+.textelectric{background: #907200}
+.textfairy{background: #a955a4}
+.textfighting{background: #b02352}
+.textfire{background: #cc4408}
+.textflying{background: #5776a5}
+.textghost{background: #33548f}
+.textgrass{background: #2b8721}
+.textground{background: #b85d2c}
+.textice{background: #1d8373}
+.textnormal{background: #6c767c}
+.textpoison{background: #904cac}
+.textpsychic{background: #cb4851}
+.textrock{background: #827649}
+.textsteel{background: #367489}
+.textwater{background: #2e78ba}
