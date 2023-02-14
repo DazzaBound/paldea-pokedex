@@ -101,7 +101,7 @@
 	{
 		"id": 21,
 		"name": "Talonflame",
-		"type": ["fire", "fling"]
+		"type": ["fire", "flying"]
 	},
 	{
 		"id": 22,
