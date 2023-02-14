@@ -3,15 +3,20 @@
 	<title>Paldea Pokédex Tracker</title>
 	<body>
 		<header>
-			<div id="title">Pokédex Completion: <span id="counter">Loading....</span>
-				<div id="typeFilter">
-					<div id="filterbug" class="textbug" onclick="filter('bug')">Bug</div><div id="filterdark" class="textdark" onclick="filter('dark')">Dark</div><div id="filterdragon" class="textdragon" onclick="filter('dragon')">Dragon</div>
-					<div id="filterelectric" class="textelectric" onclick="filter('electric')">Electric</div><div id="filterfairy" class="textfairy" onclick="filter('fairy')">Fairy</div><div id="filterfire" class="textfire" onclick="filter('fire')">Fire</div>
-					<div id="filterfighting" class="textfighting" onclick="filter('fighting')">Fighting</div><div id="filterflying" class="textflying" onclick="filter('flying')">Flying</div><div id="filterghost" class="textghost" onclick="filter('ghost')">Ghost</div>
-					<div id="filtergrass" class="textgrass" onclick="filter('grass')">Grass</div><div id="filterground" class="textground" onclick="filter('ground')">Ground</div><div id="filterice" class="textice" onclick="filter('ice')">Ice</div>
-					<div id="filternormal" class="textnormal" onclick="filter('normal')">Normal</div><div id="filterpoison" class="textpoison" onclick="filter('poison')">Poison</div><div id="filterpsychic" class="textpsychic" onclick="filter('psychic')">Psychic</div>
-					<div id="filterrock" class="textrock" onclick="filter('rock')">Rock</div><div id="filtersteel" class="textsteel" onclick="filter('steel')">Steel</div><div id="filterwater" class="textwater" onclick="filter('water')">Water</div>
-				</div>
+			<div id="title">
+				Pokédex Completion: <span id="counter"></span>
+			</div>
+			<div id="typeFilter">
+				<div id="filterbug" class="textbug" onclick="filter('bug')">Bug</div><div id="filterdark" class="textdark" onclick="filter('dark')">Dark</div><div id="filterdragon" class="textdragon" onclick="filter('dragon')">Dragon</div>
+				<div id="filterelectric" class="textelectric" onclick="filter('electric')">Electric</div><div id="filterfairy" class="textfairy" onclick="filter('fairy')">Fairy</div><div id="filterfire" class="textfire" onclick="filter('fire')">Fire</div>
+				<div id="filterfighting" class="textfighting" onclick="filter('fighting')">Fighting</div><div id="filterflying" class="textflying" onclick="filter('flying')">Flying</div><div id="filterghost" class="textghost" onclick="filter('ghost')">Ghost</div>
+				<div id="filtergrass" class="textgrass" onclick="filter('grass')">Grass</div><div id="filterground" class="textground" onclick="filter('ground')">Ground</div><div id="filterice" class="textice" onclick="filter('ice')">Ice</div>
+				<div id="filternormal" class="textnormal" onclick="filter('normal')">Normal</div><div id="filterpoison" class="textpoison" onclick="filter('poison')">Poison</div><div id="filterpsychic" class="textpsychic" onclick="filter('psychic')">Psychic</div>
+				<div id="filterrock" class="textrock" onclick="filter('rock')">Rock</div><div id="filtersteel" class="textsteel" onclick="filter('steel')">Steel</div><div id="filterwater" class="textwater" onclick="filter('water')">Water</div>
+			</div>
+			<div id="toggleAll">
+				<div id="filterAllOn" onclick="allFilter('on')">All Filters On</div>
+				<div id="filterAllOff" onclick="allFilter('off')">All Filters Off</div>
 			</div>
 		</header>
 
