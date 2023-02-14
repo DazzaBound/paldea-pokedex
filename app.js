@@ -1,6 +1,6 @@
 const start = 1;
 const total = 400;
-const filterArray = [];
+let filterArray = [];
 
 window.onload = async function() {
 		await getPkmn();
@@ -58,16 +58,38 @@ async function getPkmn(){
 }
 
 function filter(f){
-	document.getElementById("filter"+f).classList.toggle("grayOn");
 	if(!filterArray.includes(f)){
 		filterArray.push(f);
+		document.getElementById("filter"+f).classList.add("grayOn");
 	} else {
 		filterArray.splice(filterArray.indexOf(f), 1);
+		document.getElementById("filter"+f).classList.remove("grayOn");
 	}
 	for (let i = start; i <= total; i++){
 		if((filterArray.includes(pkmn[i-1].type[0]) && filterArray.includes(pkmn[i-1].type[1])) || (filterArray.includes(pkmn[i-1].type[0]) && pkmn[i-1].type.length === 1)){
 			document.getElementById(i).style.display = "none";
 		} else {
+			document.getElementById(i).style.display = "flex";
+		}
+	}
+}
+
+function allFilter(t) {
+	if (t === "off") {
+		filterArray = ["bug", "dark", "dragon", "electric", "fairy", "fire", "fighting", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water"];
+		filterArray.forEach(function(f) {
+			document.getElementById("filter"+f).classList.add("grayOn");
+		});
+		for (let i = start; i <= total; i++) {
+			document.getElementById(i).style.display = "none";
+		}
+	}
+	if (t === "on") {
+		filterArray.forEach(function(f) {
+			document.getElementById("filter"+f).classList.remove("grayOn");
+		});
+		filterArray = [];
+		for (let i = start; i <= total; i++) {
 			document.getElementById(i).style.display = "flex";
 		}
 	}
