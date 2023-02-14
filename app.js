@@ -1,5 +1,6 @@
 const start = 1;
 const total = 400;
+const filterArray = [];
 
 window.onload = async function() {
 		await getPkmn();
@@ -10,7 +11,7 @@ window.onload = async function() {
 		let pkmnID = pkmn[i-1].id;
 		let pkmnType = pkmn[i-1].type;
 
-		let card = document.createElement("div");
+		let card = document.createElement("li");
 		card.id = i;
 		card.innerHTML = "<img class='image' src='icons/"+i+".png'><div class='info'><div class='name'>"+pkmnName+"</div><div class= 'types' id= 'types"+i+"'></div>";
 		card.onclick = function(){document.getElementById(i).classList.toggle("grayOn"); updateData()};
@@ -54,4 +55,20 @@ function saveData(){
 async function getPkmn(){
 	let res = await fetch("https://dazzabound.github.io/paldea-pokedex/pkmn.json");
 	pkmn = await res.json();
+}
+
+function filter(f){
+	document.getElementById("filter"+f).classList.toggle("grayOn");
+	if(!filterArray.includes(f)){
+		filterArray.push(f);
+	} else {
+		filterArray.splice(filterArray.indexOf(f), 1);
+	}
+	for (let i = start; i <= total; i++){
+		if((filterArray.includes(pkmn[i-1].type[0]) && filterArray.includes(pkmn[i-1].type[1])) || (filterArray.includes(pkmn[i-1].type[0]) && pkmn[i-1].type.length === 1)){
+			document.getElementById(i).style.display = "none";
+		} else {
+			document.getElementById(i).style.display = "flex";
+		}
+	}
 }
