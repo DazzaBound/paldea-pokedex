@@ -1,7 +1,8 @@
 [{
 		"id": 1,
 		"name": "Sprigatito",
-		"type": ["grass"]
+		"type": ["grass"],
+		"shinyLocked": true;
 	},
 	{
 		"id": 2,
