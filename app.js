@@ -22,11 +22,11 @@ function pokeList(){
 	pkmn.forEach(function(i){
 		if(skipLocked !== "yes" || i.shinyLocked !== true){
 			addCard(i);
-			if(skipForms === "no" && i.alternateForm !== undefined){
-				i.alternateForm.forEach(function(i){
-					addCard(i);
-				});
-			}
+		}
+		if(skipForms === "no" && i.alternateForm !== undefined){
+			i.alternateForm.forEach(function(i){
+				addCard(i);
+			});
 		}
 	});
 }
@@ -94,7 +94,13 @@ function filter(f){
 		document.getElementById("filter"+f).classList.remove("grayOn");
 	}
 	document.querySelectorAll("#pokeList > li").forEach(function(i){
-		if((filterArray.includes(pkmn[i.id-1].type[0]) && filterArray.includes(pkmn[i.id-1].type[1])) || (filterArray.includes(pkmn[i.id-1].type[0]) && pkmn[i.id-1].type.length === 1)){
+		let t = document.querySelectorAll("#types"+i.id+" > div")
+		let t1 = t[0].innerText.toLowerCase();
+		let t2 = "";
+		if (t.length === 2){
+			t2 = t[1].innerText.toLowerCase();
+		}
+	if((filterArray.includes(t1) && filterArray.includes(t2)) || (filterArray.includes(t1) && t.length === 1)){
 			document.getElementById(i.id).style.display = "none";
 		} else {
 			document.getElementById(i.id).style.display = "flex";
