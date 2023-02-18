@@ -53,6 +53,12 @@
 		"name": "Oinkologne",
 		"type": ["normal"]
 	},
+ 	{
+		"id": "11-f",
+		"name": "Oinkologne (F)",
+		"type": ["normal"],
+		"alternateForm" = true
+	},
 	{
 		"id": 12,
 		"name": "Tarountula",
