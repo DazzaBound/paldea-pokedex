@@ -1,4 +1,5 @@
-[{
+[
+	{
 		"id": 1,
 		"name": "Sprigatito",
 		"type": ["grass"]
@@ -52,7 +53,13 @@
 		"id": 11,
 		"name": "Oinkologne",
 		"type": ["normal"],
-		"alternateForm": ["f"]
+		"alternateForm": [
+			{
+			"id": "11f",
+			"name": "Oinkologne (F)",
+			"type": ["normal"]
+			}
+		]
 	},
 	{
 		"id": 12,
@@ -1113,7 +1120,20 @@
 		"id": 223,
 		"name": "Tauros",
 		"type": ["fighting"],
-		"alternateForm": ["a", "b"]
+		"alternateForm": [
+			{
+			"id": "223a",
+			"name": "Tauros (A)",
+			"type": ["fighting", "water"]
+			},
+			{
+			"id": "223b",
+			"name": "Tauros (B)",
+			"type": ["fighting", "fire"]
+			}
+		]
+
+
 	},
 	{
 		"id": 224,
