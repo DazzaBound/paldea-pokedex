@@ -51,13 +51,8 @@
 	{
 		"id": 11,
 		"name": "Oinkologne",
-		"type": ["normal"]
-	},
- 	{
-		"id": "11-f",
-		"name": "Oinkologne (F)",
 		"type": ["normal"],
-		"alternateForm" = true
+		"alternateForm": ["f"]
 	},
 	{
 		"id": 12,
