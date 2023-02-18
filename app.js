@@ -3,7 +3,7 @@ let total = 400;
 let filterArray = [];
 
 let skipLocked = "no";
-let skipForms = "yes";
+let skipForms = "true";
 
 
 
@@ -20,7 +20,7 @@ window.onload = async function() {
 function pokeList(){
 	document.getElementById("pokeList").innerHTML ="";
 	pkmn.forEach(function(i){
-		if(skipLocked === "no" || i.shinyLocked !== true){
+		if(skipLocked !== "yes" || i.shinyLocked !== true){
 			addCard(i);
 			if(skipForms === "no" && i.alternateForm !== undefined){
 				i.alternateForm.forEach(function(i){
@@ -126,14 +126,14 @@ function allFilter(t) {
 function settingToggle(s){
 	if (s === "shiny") {
 		let button = document.getElementById("shinyLockToggle");
-		if(skipLocked == "no"){
-			button.classList.add("grayOn");
-			button.innerText = "Shiny Locked: Hidden"
-			skipLocked = "yes";
-		} else {
+		if(skipLocked == "yes"){
 			button.classList.remove("grayOn");
 			button.innerText = "Shiny Locked: Shown"
 			skipLocked = "no";
+		} else {
+			button.classList.add("grayOn");
+			button.innerText = "Shiny Locked: Hidden"
+			skipLocked = "yes";
 		}
 		localStorage.setItem("settingShiny", skipLocked);
 	}
