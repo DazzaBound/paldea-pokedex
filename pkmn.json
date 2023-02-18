@@ -364,7 +364,14 @@
 	{
 		"id": 72,
 		"name": "Maushold",
-		"type": ["normal"]
+		"type": ["normal"],
+		"alternateForm": [
+			{
+			"id": "72t",
+			"name": "Maushold (3)",
+			"type": ["normal"]
+			}
+		]
 	},
 	{
 		"id": 73,
@@ -454,7 +461,19 @@
 	{
 		"id": 90,
 		"name": "Lycanroc",
-		"type": ["rock"]
+		"type": ["rock"],
+		"alternateForm": [
+			{
+			"id": "90m",
+			"name": "Lycanrock (M)",
+			"type": ["rock"]
+			},
+			{
+			"id": "90d",
+			"name": "Lycanrock (D)",
+			"type": ["rock"]
+			}
+		]
 	},
 	{
 		"id": 91,
@@ -504,7 +523,24 @@
 	{
 		"id": 100,
 		"name": "Oricorio",
-		"type": ["fire", "flying"]
+		"type": ["fire", "flying"],
+		"alternateForm": [
+			{
+			"id": "100po",
+			"name": "Oricorio (Po)",
+			"type": ["electric", "flying"]
+			},
+			{
+			"id": "100pa",
+			"name": "Oricorio (Pa)",
+			"type": ["psychic", "flying"]
+			},
+			{
+			"id": "100s",
+			"name": "Oricorio (S)",
+			"type": ["ghost", "flying"]
+			}
+		]
 	},
 	{
 		"id": 101,
@@ -569,7 +605,24 @@
 	{
 		"id": 113,
 		"name": "Squawkabilly",
-		"type": ["normal", "flying"]
+		"type": ["normal", "flying"],
+		"alternateForm": [
+			{
+			"id": "113b",
+			"name": "Squawkabilly (B)",
+			"type": ["normal", "flying"]
+			},
+			{
+			"id": "113y",
+			"name": "Squawkabilly (Y)",
+			"type": ["normal", "flying"]
+			},
+			{
+			"id": "113w",
+			"name": "Squawkabilly (W)",
+			"type": ["normal", "flying"]
+			}
+		]
 	},
 	{
 		"id": 114,
@@ -694,7 +747,14 @@
 	{
 		"id": 138,
 		"name": "Basculin",
-		"type": ["water"]
+		"type": ["water"],
+		"alternateForm": [
+			{
+			"id": "138b",
+			"name": "Basculin (B)",
+			"type": ["water"]
+			}
+		]
 	},
 	{
 		"id": 139,
@@ -729,17 +789,83 @@
 	{
 		"id": 145,
 		"name": "Flabébé",
-		"type": ["fairy"]
+		"type": ["fairy"],
+		"alternateForm": [
+			{
+			"id": "145y",
+			"name": "Flabébé (Y)",
+			"type": ["fairy"]
+			},
+			{
+			"id": "145o",
+			"name": "Flabébé (O)",
+			"type": ["fairy"]
+			},
+			{
+			"id": "145b",
+			"name": "Flabébé (B)",
+			"type": ["fairy"]
+			},
+			{
+			"id": "145w",
+			"name": "Flabébé (W)",
+			"type": ["fairy"]
+			}
+		]
 	},
 	{
 		"id": 146,
 		"name": "Floette",
-		"type": ["fairy"]
+		"type": ["fairy"],
+		"alternateForm": [
+			{
+			"id": "146y",
+			"name": "Floette (Y)",
+			"type": ["fairy"]
+			},
+			{
+			"id": "146o",
+			"name": "Floette (O)",
+			"type": ["fairy"]
+			},
+			{
+			"id": "146b",
+			"name": "Floette (B)",
+			"type": ["fairy"]
+			},
+			{
+			"id": "146w",
+			"name": "Floette (W)",
+			"type": ["fairy"]
+			}
+		]
 	},
 	{
 		"id": 147,
 		"name": "Florges",
-		"type": ["fairy"]
+		"type": ["fairy"],
+		"alternateForm": [
+			{
+			"id": "147y",
+			"name": "Florges (Y)",
+			"type": ["fairy"]
+			},
+			{
+			"id": "147o",
+			"name": "Florges (O)",
+			"type": ["fairy"]
+			},
+			{
+			"id": "147b",
+			"name": "Florges (B)",
+			"type": ["fairy"]
+			},
+			{
+			"id": "147w",
+			"name": "Florges (W)",
+			"type": ["fairy"]
+			}
+		]
 	},
 	{
 		"id": 148,
@@ -949,17 +1075,58 @@
 	{
 		"id": 189,
 		"name": "Dudunsparce",
-		"type": ["normal"]
+		"type": ["normal"],
+		"alternateForm": [
+			{
+			"id": "189t",
+			"name": "Dudunsparce (3)",
+			"type": ["normal"]
+			}
+		]
 	},
 	{
 		"id": 190,
 		"name": "Deerling",
-		"type": ["normal", "grass"]
+		"type": ["normal", "grass"],
+		"alternateForm": [
+			{
+			"id": "190s",
+			"name": "Deerling (Sp)",
+			"type": ["normal", "grass"]
+			},
+			{
+			"id": "190f",
+			"name": "Deerling (F)",
+			"type": ["normal", "grass"]
+			},
+			{
+			"id": "190w",
+			"name": "Deerling (W)",
+			"type": ["normal", "grass"]
+			}
+		]
 	},
 	{
-		"id": 191,
-		"name": "Sawsbuck",
-		"type": ["normal", "grass"]
+			"id": 191,
+			"name": "Sawsbuck",
+			"type": ["normal", "grass"],
+			"alternateForm": [
+			{
+			"id": "191s",
+			"name": "Sawsbuck (Sp)",
+			"type": ["normal", "grass"]
+			},
+			{
+			"id": "191f",
+			"name": "Sawsbuck (F)",
+			"type": ["normal", "grass"]
+			},
+			{
+			"id": "191w",
+			"name": "Sawsbuck (W)",
+			"type": ["normal", "grass"]
+			}
+		]
 	},
 	{
 		"id": 192,
@@ -999,7 +1166,14 @@
 	{
 		"id": 199,
 		"name": "Toxtricity",
-		"type": ["electric", "poison"]
+		"type": ["electric", "poison"],
+		"alternateForm": [
+			{
+			"id": "199l",
+			"name": "Toxtricity (L)",
+			"type": ["electric", "poison"]
+			}
+		]
 	},
 	{
 		"id": 200,
@@ -1132,8 +1306,6 @@
 			"type": ["fighting", "fire"]
 			}
 		]
-
-
 	},
 	{
 		"id": 224,
@@ -1143,7 +1315,14 @@
 	{
 		"id": 225,
 		"name": "Pyroar",
-		"type": ["fire", "normal"]
+		"type": ["fire", "normal"],
+		"alternateForm": [
+			{
+			"id": "225f",
+			"name": "Pyroar F",
+			"type": ["fire", "normal"]
+			}
+		]
 	},
 	{
 		"id": 226,
@@ -1203,12 +1382,26 @@
 	{
 		"id": 237,
 		"name": "Sinistea",
-		"type": ["ghost"]
+		"type": ["ghost"],
+		"alternateForm": [
+			{
+			"id": "237a",
+			"name": "Sinistea (A)",
+			"type": ["ghost"]
+			}
+		]
 	},
 	{
 		"id": 238,
 		"name": "Polteageist",
-		"type": ["ghost"]
+		"type": ["ghost"],
+		"alternateForm": [
+			{
+			"id": "238a",
+			"name": "Polteageist (A)",
+			"type": ["ghost"]
+			}
+		]
 	},
 	{
 		"id": 239,
@@ -1568,7 +1761,34 @@
 	{
 		"id": 310,
 		"name": "Rotom",
-		"type": ["electric", "ghost"]
+		"type": ["electric", "ghost"],
+		"alternateForm": [
+			{
+			"id": "310h",
+			"name": "Rotom (H)",
+			"type": ["electric", "fire"]
+			},
+			{
+			"id": "310w",
+			"name": "Rotom (W)",
+			"type": ["electric", "water"]
+			},
+			{
+			"id": "310fr",
+			"name": "Rotom (Fr)",
+			"type": ["electric", "ice"]
+			},
+			{
+			"id": "310fa",
+			"name": "Rotom (Fa)",
+			"type": ["electric", "flying"]
+			},
+			{
+			"id": "310m",
+			"name": "Rotom (M)",
+			"type": ["electric", "grass"]
+			}
+		]
 	},
 	{
 		"id": 311,
@@ -1653,12 +1873,26 @@
 	{
 		"id": 327,
 		"name": "Shellos",
-		"type": ["water"]
+		"type": ["water"],
+		"alternateForm": [
+			{
+			"id": "327e",
+			"name": "Shellos (E)",
+			"type": ["water"]
+			}
+		]
 	},
 	{
 		"id": 328,
 		"name": "Gastrodon",
-		"type": ["water", "ground"]
+		"type": ["water", "ground"],
+		"alternateForm": [
+			{
+			"id": "328e",
+			"name": "Gastrodon (E)",
+			"type": ["water", "ground"]
+			}
+		]
 	},
 	{
 		"id": 329,
@@ -1893,7 +2127,19 @@
 	{
 		"id": 375,
 		"name": "Tatsugiri",
-		"type": ["water", "dragon"]
+		"type": ["water", "dragon"],
+		"alternateForm": [
+			{
+			"id": "375d",
+			"name": "Tatsugiri (D)",
+			"type": ["water", "dragon"]
+			},
+			{
+			"id": "375s",
+			"name": "Tatsugiri (S)",
+			"type": ["water", "dragon"]
+			}
+		]
 	},
 	{
 		"id": 376,
