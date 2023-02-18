@@ -2,8 +2,8 @@ let start = 1;
 let total = 400;
 let filterArray = [];
 
-let skipLocked = "yes";
-let skipForms = "true";
+let skipLocked = "no";
+let skipForms = "yes";
 
 
 
