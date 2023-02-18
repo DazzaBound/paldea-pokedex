@@ -1,8 +1,7 @@
 [{
 		"id": 1,
 		"name": "Sprigatito",
-		"type": ["grass"],
-		"shinyLocked": true
+		"type": ["grass"]
 	},
 	{
 		"id": 2,
@@ -53,6 +52,13 @@
 		"id": 11,
 		"name": "Oinkologne",
 		"type": ["normal"]
+	},
+ 	{
+		"id": 11-f,
+		"name": "Oinkologne-F",
+		"type": ["normal"],
+		"alternateForm": true
+		
 	},
 	{
 		"id": 12,
@@ -1952,32 +1958,38 @@
 	{
 		"id": 391,
 		"name": "Gimmighoul",
-		"type": ["ghost"]
+		"type": ["ghost"],
+		"shinyLocked": true
 	},
 	{
 		"id": 392,
 		"name": "Gholdengo",
-		"type": ["ghost", "steel"]
+		"type": ["ghost", "steel"],
+		"shinyLocked": true
 	},
 	{
 		"id": 393,
 		"name": "Wo-Chien",
-		"type": ["dark", "grass"]
+		"type": ["dark", "grass"],
+		"shinyLocked": true
 	},
 	{
 		"id": 394,
 		"name": "Chien-Pao",
-		"type": ["dark", "ice"]
+		"type": ["dark", "ice"],
+		"shinyLocked": true
 	},
 	{
 		"id": 395,
 		"name": "Ting-Lu",
-		"type": ["dark", "ground"]
+		"type": ["dark", "ground"],
+		"shinyLocked": true
 	},
 	{
 		"id": 396,
 		"name": "Chi-Yu",
-		"type": ["dark", "fire"]
+		"type": ["dark", "fire"],
+		"shinyLocked": true
 	},
 	{
 		"id": 397,
@@ -1992,11 +2004,13 @@
 	{
 		"id": 399,
 		"name": "Koraidon",
-		"type": ["dragon", "fighting"]
+		"type": ["dragon", "fighting"],
+		"shinyLocked": true
 	},
 	{
 		"id": 400,
 		"name": "Miraidon",
-		"type": ["dragon", "electric"]
+		"type": ["dragon", "electric"],
+		"shinyLocked": true
 	}
 ]
