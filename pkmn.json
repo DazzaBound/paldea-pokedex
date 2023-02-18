@@ -1112,7 +1112,8 @@
 	{
 		"id": 223,
 		"name": "Tauros",
-		"type": ["fighting"]
+		"type": ["fighting"],
+		"alternateForm": ["a", "b"]
 	},
 	{
 		"id": 224,
