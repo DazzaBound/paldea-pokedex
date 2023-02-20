@@ -1691,7 +1691,7 @@
 	{
 		"id": 296,
 		"name": "Orthworm",
-		"type": ["steel", "poison"]
+		"type": ["steel"]
 	},
 	{
 		"id": 297,
