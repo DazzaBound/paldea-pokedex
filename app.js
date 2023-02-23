@@ -176,6 +176,7 @@ function enableDarkMode() {
 	document.getElementById("footer").classList.add("darkMode");
 	document.getElementById("credit").classList.add("darkMode");
 	document.getElementById("themeToggle").classList.add("darkMode");
+	document.getElementById("toggleIcon").classList.add("darkMode");
 	localStorage.setItem("theme", "dark")
 }
 
@@ -186,6 +187,7 @@ function disableDarkMode() {
 	document.getElementById("footer").classList.remove("darkMode");
 	document.getElementById("credit").classList.remove("darkMode");
 	document.getElementById("themeToggle").classList.remove("darkMode");
+	document.getElementById("toggleIcon").classList.remove("darkMode");
 	localStorage.setItem("theme", "light")
 }
 
