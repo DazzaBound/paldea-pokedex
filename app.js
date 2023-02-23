@@ -162,3 +162,45 @@ function settingToggle(s){
 	loadData();
 	updateData();
 }
+
+
+
+// -------- THEME SELECTOR --------- //
+
+let theme = localStorage.getItem("theme");
+
+function enableDarkMode() {
+	document.body.classList.add("darkMode");
+	document.getElementById("header").classList.add("darkMode");
+	document.getElementById("pokeList").classList.add("darkMode");
+	document.getElementById("footer").classList.add("darkMode");
+	document.getElementById("credit").classList.add("darkMode");
+	document.getElementById("themeToggle").classList.add("darkMode");
+	localStorage.setItem("theme", "dark")
+}
+
+function disableDarkMode() {
+	document.body.classList.remove("darkMode");
+	document.getElementById("header").classList.remove("darkMode");
+	document.getElementById("pokeList").classList.remove("darkMode");
+	document.getElementById("footer").classList.remove("darkMode");
+	document.getElementById("credit").classList.remove("darkMode");
+	document.getElementById("themeToggle").classList.remove("darkMode");
+	localStorage.setItem("theme", "light")
+}
+
+if (theme === "dark") {
+	enableDarkMode();
+}
+
+document.getElementById("themeToggle").addEventListener("click", function(){
+
+	theme = localStorage.getItem("theme");
+
+	if (theme !== "dark") {
+		enableDarkMode();
+	} else {
+		disableDarkMode();
+	}
+
+});
