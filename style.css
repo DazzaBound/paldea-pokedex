@@ -27,14 +27,14 @@ header{
 	grid-column-gap: 5px;
 	padding: 5px 10px 5px 10px;
 	background: #b9ebb9;
-	border: 3px solid rgba(0,0,0,0.08);
+	border: 2px solid rgba(0,0,0,0.08);
 	border-radius: 10px;
 	text-align: center;
 }
 header.darkMode, #credit.darkMode{
 	background: #2a3a30;
 	color: #e0ebe2;
-	border: 3px solid rgba(255,255,255,0.08);
+	border: 2px solid rgba(255,255,255,0.08);
 }
 footer{
 	bottom: 0;
@@ -44,14 +44,14 @@ footer.darkMode{
 	background: #2a2e2b;
 }
 #title{
-	align-self: center;
+	align-self: flex-end;
 }
 #credit{
 	display: flex;
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 500;
 	padding: 2px 2px 2px 10px;
-	border: 3px solid rgba(0,0,0,0.08);
+	border: 2px solid rgba(0,0,0,0.08);
 	border-radius: 10px;
 	background: #b9ebb9;
 	align-items: center;
@@ -62,34 +62,44 @@ footer.darkMode{
 #credit.darkMode a{
 	color: #e0ebe2;
 }
-#themeToggle {
+svg{
 	margin-left: auto;
+	margin-right: 5px;
+	stroke: black;
+	transition: stroke 0.5s ease-in;
+}
+svg.darkMode {
+	stroke: #e0ebe2;
+}
+#themeToggle {
 	margin-right: 8px;
-	width: 40px;
-	height: 20px;
+	width: 32px;
+	height: 16px;
 	position: relative;
 	display: block;
 	background: white;
+	border: 1px solid black;
 	border-radius: 30px;
 	cursor: pointer;
 }
 #themeToggle::after {
 	content: "";
-	width: 16px;
-	height: 16px;
+	width: 12px;
+	height: 12px;
 	position: absolute;
 	top: 2px;
 	left: 2px;
-	background: #b9ebb9;
+	background: black;
 	border-radius: 50%;
-	transition: left 0.3s ease-out, background-color 0.3s ease-out;
+	transition: left 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
 }
 #themeToggle.darkMode {
 	background: #e0ebe2;
+	border-color: #2a4d37;
 }
 #themeToggle.darkMode::after {
-	left: 22px;
-	background: #2a3a30;
+	left: 16px;
+	background: #2a4d37;
 }
 #pokeList{
 	margin: 10px;
@@ -103,7 +113,7 @@ footer.darkMode{
 }
 #pokeList.darkMode li {
 	background: #2a4d37;
-	border: 3px solid rgba(255,255,255,0.08);
+	border: 2px solid rgba(255,255,255,0.08);
 	color: #e0ebe2;
 }
 #typeFilter{
@@ -131,12 +141,10 @@ footer.darkMode{
 #filterAllOff{
 	background: #222;
 }
-#shinyLockToggle{
-	background: #907200; transition: background-color 0.5s ease;
-}
-#formToggle{
-	background: red; transition: background-color 0.5s ease;
-}
+
+#shinyLockToggle{background: #907200;}
+#formToggle{background: red;}
+
 #settingsContainer{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -146,7 +154,7 @@ footer.darkMode{
 	flex-direction: column;
 	width: 100px;
 	background: #b9ebb9;
-	border: 3px solid rgba(0,0,0,0.08);
+	border: 2px solid rgba(0,0,0,0.08);
 	border-radius: 10px;
 	padding: 5px 1px 1px 1px;
 	filter: grayscale(0%);
@@ -154,6 +162,7 @@ footer.darkMode{
 	margin: 3px;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 }
 .image{
 	display: flex;
@@ -189,24 +198,30 @@ footer.darkMode{
 	display:none;
 }
 
-.textbug{background: #518300; transition: background-color 0.5s ease;}
-.textdark{background: #433d4c; transition: background-color 0.5s ease;}
-.textdragon{background: #0052a8; transition: background-color 0.5s ease;}
-.textelectric{background: #907200; transition: background-color 0.5s ease;}
-.textfairy{background: #a955a4; transition: background-color 0.5s ease;}
-.textfighting{background: #b02352; transition: background-color 0.5s ease;}
-.textfire{background: #cc4408; transition: background-color 0.5s ease;}
-.textflying{background: #5776a5; transition: background-color 0.5s ease;}
-.textghost{background: #33548f; transition: background-color 0.5s ease;}
-.textgrass{background: #2b8721; transition: background-color 0.5s ease;}
-.textground{background: #b85d2c; transition: background-color 0.5s ease;}
-.textice{background: #1d8373; transition: background-color 0.5s ease;}
-.textnormal{background: #6c767c; transition: background-color 0.5s ease;}
-.textpoison{background: #904cac; transition: background-color 0.5s ease;}
-.textpsychic{background: #cb4851; transition: background-color 0.5s ease;}
-.textrock{background: #827649; transition: background-color 0.5s ease;}
-.textsteel{background: #367489; transition: background-color 0.5s ease;}
-.textwater{background: #2e78ba; transition: background-color 0.5s ease;}
+.textbug{background: #518300;}
+.textdark{background: #433d4c;}
+.textdragon{background: #0052a8;}
+.textelectric{background: #907200;}
+.textfairy{background: #a955a4;}
+.textfighting{background: #b02352;}
+.textfire{background: #cc4408;}
+.textflying{background: #5776a5;}
+.textghost{background: #33548f;}
+.textgrass{background: #2b8721;}
+.textground{background: #b85d2c;}
+.textice{background: #1d8373;}
+.textnormal{background: #6c767c;}
+.textpoison{background: #904cac;}
+.textpsychic{background: #cb4851;}
+.textrock{background: #827649;}
+.textsteel{background: #367489;}
+.textwater{background: #2e78ba;}
+
+.textbug, .textdark, .textdragon, .textelectric, .textfairy, .textfighting, .textfire, .textflying, .textghost,
+.textgrass, .textground, .textice, .textnormal, .textpoison, .textpsychic, .textrock, .textsteel, .textwater, #formToggle, #shinyLockToggle {
+	cursor: pointer;
+	transition: background-color 0.5s ease;
+}
 
 .grayOn{
 	background:  #aaa !important;
