@@ -148,11 +148,11 @@ function settingToggle(s){
 		let button = document.getElementById("formToggle");
 		if(skipForms == "no"){
 			button.classList.add("grayOn");
-			button.innerText = "Pokémon Forms: Unique Only";
+			button.innerText = "Forms: Unique Only";
 			skipForms = "yes";
 		} else {
 			button.classList.remove("grayOn")
-			button.innerText = "Pokémon Forms: All"
+			button.innerText = "Forms: All"
 			skipForms = "no";
 		}
 		localStorage.setItem("settingForm", skipForms);
@@ -163,6 +163,21 @@ function settingToggle(s){
 	updateData();
 }
 
+var search = document.getElementById("pokeSearch");
+search.addEventListener("keypress", function(event) {
+	if (event.key === "Enter") {
+
+		allFilter("on");
+		document.querySelectorAll("#pokeList > li").forEach(function(i) {
+			t = i.querySelector(".name").innerText;
+			if (t.toUpperCase().indexOf(search.value.toUpperCase()) > -1) {
+				i.style.display = "flex";
+			} else {
+				i.style.display = "none";
+			}
+		});
+	}
+});
 
 
 // -------- THEME SELECTOR --------- //
