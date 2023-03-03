@@ -5,8 +5,6 @@ let filterArray = [];
 let skipLocked = "no";
 let skipForms = "true";
 
-
-
 window.onload = async function() {
 	await getPkmn();
 	console.log(pkmn);
@@ -15,6 +13,7 @@ window.onload = async function() {
 	pokeList();
 	loadData();
 	updateData();
+	document.getElementById("menuContainer").style.display = "block";
 }
 
 function pokeList(){
@@ -179,6 +178,16 @@ search.addEventListener("keypress", function(event) {
 	}
 });
 
+function openMenu() {
+	document.getElementById("menuContainer").classList.add("open");
+	document.body.classList.add("fixed");
+}
+
+function closeMenu() {
+	document.getElementById("menuContainer").classList.remove("open");
+	document.body.classList.remove("fixed");
+}
+
 
 // -------- THEME SELECTOR --------- //
 
@@ -192,7 +201,8 @@ function enableDarkMode() {
 	document.getElementById("credit").classList.add("darkMode");
 	document.getElementById("themeToggle").classList.add("darkMode");
 	document.getElementById("toggleIcon").classList.add("darkMode");
-	localStorage.setItem("theme", "dark")
+	document.getElementById("menuContents").classList.add("darkMode");
+	localStorage.setItem("theme", "dark");
 }
 
 function disableDarkMode() {
@@ -203,7 +213,8 @@ function disableDarkMode() {
 	document.getElementById("credit").classList.remove("darkMode");
 	document.getElementById("themeToggle").classList.remove("darkMode");
 	document.getElementById("toggleIcon").classList.remove("darkMode");
-	localStorage.setItem("theme", "light")
+	document.getElementById("menuContents").classList.remove("darkMode");
+	localStorage.setItem("theme", "light");
 }
 
 if (theme === "dark") {
