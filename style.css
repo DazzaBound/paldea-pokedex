@@ -3,7 +3,23 @@
 ul {
 	padding: 0;
 }
-body{
+button,input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    line-height: 1.15;
+    font-family: inherit;
+    font-size: 100%;
+    background: 0;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    outline: 0;
+	overflow: visible;
+}
+body {
+	color: #444;
 	font-size: 28px;
 	font-family: "Nunito";
 	font-weight: 700;
@@ -12,34 +28,158 @@ body{
 	max-width: 960px;
 	width: 100%;
 }
-body.darkMode{
+body.fixed {
+	width: 100%;
+	overflow: hidden;
+	touch-action: none;
+}
+body.darkMode {
 	background: #36393f;
 }
-header, footer{
+header, footer {
 	z-index: 2;
 	background: #dbf1dc;
 	color: #444;
 }
-header{
+header {
 	position: sticky;
 	top: 0;
-	padding: 5px 5px 0px 5px;
-	display: grid;
-	grid-template-columns: 4fr 3fr 0.8fr;
-	grid-column-gap: 5px;
-	padding: 5px 10px 5px 10px;
+	display: flex;
+	padding: 5px 20px 5px 20px;
 	background: white;
 	box-shadow: 0 2px 0 0 rgba(0,0,0,0.15);
 	border-radius: 0 0 10px 10px;
-	text-align: center;
+	justify-content: space-between;
+	align-items: center;
 }
-header.darkMode, #credit.darkMode{
+header.darkMode, #credit.darkMode {
 	background: #26292e;
 	color: #dddddd;
 	box-shadow: 0 2px 0 0 rgba(0,0,0,0.4);
 }
-header.darkMode input{
+header.darkMode input {
 	background-color: #36393f;
+}
+#searchBar{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-left: 20px;
+	border-radius: 5px;
+	background-color: #f4f4f4;
+}
+#pokeSearch{
+	display: inline-block;
+	width: 100%;
+	padding: 8px 10px 8px 10px;
+	font-size: 16px;
+}
+#menuButton{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding: 2px;
+	margin-left: 20px;
+	height: 36px;
+	width: 36px;
+	min-width: 36px;
+	cursor: pointer;
+}
+#menuButton span{
+	display: inline-block;
+	position: relative;
+	height: 2px;
+	background: #444;
+	width: 100%;
+	border-radius: 1px;
+}
+#menuButton span::before, #menuButton span::after{
+	content: "";
+	display: inline-block;
+	position: absolute;
+	height: 2px;
+	background: #444;
+	width: 100%;
+	border-radius: 1px;
+	transition: transform 0.2s ease;
+}
+#menuButton span::before {
+    transform: translate(-50%,-8px)
+}
+
+#menuButton span::after {
+    transform: translate(-50%,8px)
+}
+
+#menuButton:hover span::before {
+    transform: translate(-50%,-12px)
+}
+
+#menuButton:hover span::after {
+    transform: translate(-50%,12px)
+}
+#menuContainer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(2px);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s, visibility 0.3s;
+	z-index: 10;
+}
+#menuContainer.open {
+	visibility: visible;
+	opacity: 1;
+}
+#menuOptions{
+	display:flex;
+	margin-left: auto;
+	align-items: center;
+}
+#menuClose{
+	font-size: 28px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	border-radius: 50%;
+}
+#menuClose:hover{
+	background: #ddd;
+}
+#menuContents{
+	font-size: 20px;
+	display: flex;
+	flex-flow: column;
+	width: 260px;
+	height: 100%;
+	float: right;
+	background: #f4f4f4;
+	padding: 20px 20px 20px 20px;
+	overflow: auto;
+	transform: translateX(100%);
+	transition: background-color 0.3s, transform 0.3s;
+}
+#menuContents hr {
+	margin: 15px 0 15px 0;
+}
+#menuContainer.open #menuContents{
+	transform: translateX(0);
+}
+#menuContents.darkMode{
+	background: #26292e;
+	color: #ddd;
+}
+#menuContents.darkmode #menuClose:hover{
+	background: rgba(255, 255, 255, 0.15);
 }
 footer{
 	position: fixed;
@@ -52,31 +192,31 @@ footer.darkMode{
 }
 #title{
 	align-self: flex-end;
+	white-space: nowrap;
 }
 #credit{
 	display: flex;
 	font-size: 16px;
-	font-weight: 500;
 	padding: 2px 2px 2px 10px;
 	border-radius: 10px 10px 0 0;
 	box-shadow: 0 2px 0 0 rgba(0,0,0,0.15);
 	background: white;
+	justify-content: center;
 	align-items: center;
 }
 #credit a{
 	color: #444;
 }
 #credit.darkMode a{
-	color: #e0ebe2;
+	color: #ddd;
 }
 svg{
-	margin-left: auto;
 	margin-right: 5px;
 	stroke: #444;
 	transition: stroke 0.5s ease-in;
 }
 svg.darkMode {
-	stroke: #e0ebe2;
+	stroke: #ddd;
 }
 #themeToggle {
 	margin-right: 8px;
@@ -101,8 +241,8 @@ svg.darkMode {
 	transition: left 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
 }
 #themeToggle.darkMode {
-	background: #e0ebe2;
-	border-color: #2a4d37;
+	background: #ddd;
+	border-color: black;
 }
 #themeToggle.darkMode::after {
 	left: 16px;
@@ -121,20 +261,20 @@ svg.darkMode {
 #pokeList.darkMode li {
 	background: #4c6857;
 	box-shadow: 0 2px 0 0 rgba(0,0,0,0.4), inset 0 0 0 2px rgb(82, 158, 63);
-	color: #e0ebe2;
+	color: #ddd;
 }
 #typeFilter{
 	display:grid;
-	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 }
 #toggleAll{
 	display: grid;
 	grid-template-rows: repeat(2, 1fr);
+	margin-bottom: 10px;
 }
 #toggleAll > div, #typeFilter > div, #settingsContainer > div{
 	display: flex;
-	font-size: 11px;
+	font-size: 16px;
 	font-weight: 500;
 	color: white;
 	justify-content: center;
@@ -150,13 +290,12 @@ svg.darkMode {
 #filterAllOff{
 	background: #222;
 }
-
 #shinyLockToggle{background: #907200;}
 #formToggle{background: red;}
 
 #settingsContainer{
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 }
 .container{
 	display: flex;
@@ -247,15 +386,21 @@ svg.darkMode {
 
 @media(max-width: 575px) {
 	#header{
-		display: flex;
 		justify-content: center;
 		font-size: 24px;
 	}
-    #settingsContainer, #typeFilter, #toggleAll{
+	#title{
+		display:flex;
+		flex: 1;
+		justify-content: center;
+	}
+	#counter{
+		margin-left: 10px;
+	}
+    #searchBar{
         display: none;
     }
 	#credit{
-		font-size: 10px;
-		font-weight: 700;
+		font-size: 14px;
 	}
 }
