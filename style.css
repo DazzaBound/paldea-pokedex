@@ -391,7 +391,7 @@ svg.darkMode {
 @media(max-width: 575px) {
 	#header{
 		justify-content: center;
-		font-size: 24px;
+		font-size: 22px;
 	}
 	#title{
 		display:flex;
@@ -405,6 +405,6 @@ svg.darkMode {
         display: none;
     }
 	#credit{
-		font-size: 14px;
+		font-size: 12px;
 	}
 }
