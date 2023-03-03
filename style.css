@@ -94,6 +94,7 @@ header.darkMode input {
 	width: 100%;
 	border-radius: 1px;
 }
+
 #menuButton span::before, #menuButton span::after{
 	content: "";
 	display: inline-block;
@@ -103,6 +104,9 @@ header.darkMode input {
 	width: 100%;
 	border-radius: 1px;
 	transition: transform 0.2s ease;
+}
+header.darkMode #menuButton span, header.darkMode #menuButton span::before, header.darkMode #menuButton span::after{
+	background: #ddd;
 }
 #menuButton span::before {
     transform: translate(-50%,-8px)
