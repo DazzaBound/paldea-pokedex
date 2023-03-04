@@ -189,7 +189,19 @@
 	{
 		"id": 37,
 		"name": "Vivillon",
-		"type": ["bug", "flying"]
+		"type": ["bug", "flying"],
+		"alternateForm": [
+			{
+			"id": "37-archipelago",
+			"name": "Vivillon (A)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-continental",
+			"name": "Vivillon (C)",
+			"type": ["bug", "flying"]
+			}
+		]
 	},
 	{
 		"id": 38,
