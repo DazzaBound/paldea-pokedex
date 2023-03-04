@@ -182,7 +182,7 @@ header.darkMode #menuButton span, header.darkMode #menuButton span::before, head
 	background: #26292e;
 	color: #ddd;
 }
-#menuContents.darkmode #menuClose:hover{
+#menuContents.darkMode #menuClose:hover{
 	background: rgba(255, 255, 255, 0.15);
 }
 footer{
