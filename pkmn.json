@@ -200,6 +200,86 @@
 			"id": "37-continental",
 			"name": "Vivillon (C)",
 			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-elegant",
+			"name": "Vivillon (E)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-garden",
+			"name": "Vivillon (G)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-highplains",
+			"name": "Vivillon (HP)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-icysnow",
+			"name": "Vivillon (IS)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-jungle",
+			"name": "Vivillon (J)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-marine",
+			"name": "Vivillon (Ma)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-meadow",
+			"name": "Vivillon (Me)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-modern",
+			"name": "Vivillon (Mod)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-monsoon",
+			"name": "Vivillon (Mon)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-ocean",
+			"name": "Vivillon (O)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-polar",
+			"name": "Vivillon (P)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-river",
+			"name": "Vivillon (R)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-sandstorm",
+			"name": "Vivillon (San)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-savannah",
+			"name": "Vivillon (Sav)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-sun",
+			"name": "Vivillon (Su)",
+			"type": ["bug", "flying"]
+			},
+			{
+			"id": "37-tundra",
+			"name": "Vivillon (T)",
+			"type": ["bug", "flying"]
 			}
 		]
 	},
