@@ -66,17 +66,14 @@ header.darkMode input {
 	align-items: center;
 	width: 100%;
 	margin-left: 20px;
-	border-radius: 5px;
-	background-color: #f4f4f4;
-}
-header.darkMode #searchBar {
-	background-color: #36393f;
 }
 #pokeSearch{
 	display: inline-block;
 	width: 100%;
 	padding: 8px 30px 8px 10px;
 	font-size: 16px;
+	background: #eee;
+	border-radius: 8px 0 0 8px;
 }
 #clearSearch {
 	display: flex;
@@ -89,7 +86,7 @@ header.darkMode #searchBar {
 	border-radius: 10px;
 	background: rgba(0, 0, 0, 0.15);
 	transition: background-color 0.3s;
-	right: 5px;
+	right: 40px;
 	cursor: pointer;
 }
 #searchBar.value #clearSearch {
@@ -97,6 +94,26 @@ header.darkMode #searchBar {
 }
 #clearSearch:hover{
 	background: rgba(0, 0, 0, 0.3);
+}
+#searchButton {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3px;
+	margin-left: 2px;
+	cursor: pointer;
+	background: #eee;
+	border-radius: 0 8px 8px 0;
+}
+header.darkMode #pokeSearch, header.darkMode #searchButton {
+	background:#36393f;
+}
+header svg {
+	stroke: #444;
+}
+header.darkMode svg {
+	stroke: #ddd;
 }
 header.darkMode #clearSearch {
 	background: rgba(255, 255, 255, 0.15);
@@ -252,12 +269,12 @@ footer.darkMode{
 #credit.darkMode a{
 	color: #ddd;
 }
-svg{
+#menuOptions svg{
 	margin-right: 5px;
 	stroke: #444;
 	transition: stroke 0.5s ease-in;
 }
-svg.darkMode {
+#menuOptions svg.darkMode {
 	stroke: #ddd;
 }
 #themeToggle {
@@ -360,7 +377,7 @@ svg.darkMode {
 	align-items: center;
 	max-width: 100%;
 	height: 70px;
-	transition: filter 0.5s ease;
+	transition: filter 0.3s ease, opacity 0.3s ease;
 	object-fit: contain;
 }
 .info{
@@ -370,7 +387,8 @@ svg.darkMode {
 	width: 100%;
 }
 .grayOn img{
-	filter: grayscale(100%);
+	filter: grayscale(100%) brightness(0.5);
+	opacity: 50%;
 }
 .types{
 	font-size: 11px;
@@ -420,7 +438,6 @@ svg.darkMode {
 #pokeList.darkMode li.grayOn{
 	background: rgba(255,255,255,.15) !important;
 	box-shadow: 0 2px 0 0 rgba(0,0,0,0.4);
-	color: #e0ebe2;
 }
 #settingsContainer > .grayOn, #typeFilter > .grayOn{
 	background: #bbb !important;
