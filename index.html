@@ -8,7 +8,9 @@
 			<div id="title">
 				Pokédex Completion: <span id="counter"></span>
 			</div>
-			<div id="searchBar"><input type="text" id="pokeSearch" placeholder="Search for Pokémon..."></div>
+			<div id="searchBar">
+				<input type="text" id="pokeSearch" onkeyup="searchContent()" placeholder="Search for Pokémon..."><button id="clearSearch" onclick="clearSearch()">x</button>
+			</div>
 			<button id="menuButton" onclick="openMenu()"><span></span></button>
 		</header>
 
