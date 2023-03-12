@@ -165,16 +165,7 @@ function settingToggle(s){
 var search = document.getElementById("pokeSearch");
 search.addEventListener("keypress", function(event) {
 	if (event.key === "Enter") {
-
-		allFilter("on");
-		document.querySelectorAll("#pokeList > li").forEach(function(i) {
-			t = i.querySelector(".name").innerText;
-			if (t.toUpperCase().indexOf(search.value.toUpperCase()) > -1) {
-				i.style.display = "flex";
-			} else {
-				i.style.display = "none";
-			}
-		});
+		startSearch();
 	}
 });
 
@@ -182,6 +173,7 @@ function clearSearch() {
 	document.getElementById("pokeSearch").value = "";
 	searchContent();
 }
+
 function searchContent() {
 	if (document.getElementById("pokeSearch").value !== "") {
 		document.getElementById("searchBar").classList.add("value");
@@ -190,6 +182,19 @@ function searchContent() {
 		allFilter("on");
 	}
 }
+
+function startSearch() {
+	allFilter("on");
+	document.querySelectorAll("#pokeList > li").forEach(function(i) {
+		t = i.querySelector(".name").innerText;
+		if (t.toUpperCase().indexOf(search.value.toUpperCase()) > -1) {
+			i.style.display = "flex";
+		} else {
+			i.style.display = "none";
+		}
+	});
+}
+
 
 function openMenu() {
 	document.getElementById("menuContainer").classList.add("open");
