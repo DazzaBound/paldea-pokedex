@@ -178,6 +178,19 @@ search.addEventListener("keypress", function(event) {
 	}
 });
 
+function clearSearch() {
+	document.getElementById("pokeSearch").value = "";
+	searchContent();
+}
+function searchContent() {
+	if (document.getElementById("pokeSearch").value !== "") {
+		document.getElementById("searchBar").classList.add("value");
+	} else {
+		document.getElementById("searchBar").classList.remove("value");
+		allFilter("on");
+	}
+}
+
 function openMenu() {
 	document.getElementById("menuContainer").classList.add("open");
 	document.body.classList.add("fixed");
