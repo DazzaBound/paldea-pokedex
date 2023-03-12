@@ -58,21 +58,52 @@ header.darkMode, #credit.darkMode {
 	box-shadow: 0 2px 0 0 rgba(0,0,0,0.4);
 }
 header.darkMode input {
-	background-color: #36393f;
+	color: #ddd;
 }
 #searchBar{
 	display: flex;
+	position: relative;
 	align-items: center;
 	width: 100%;
 	margin-left: 20px;
 	border-radius: 5px;
 	background-color: #f4f4f4;
 }
+header.darkMode #searchBar {
+	background-color: #36393f;
+}
 #pokeSearch{
 	display: inline-block;
 	width: 100%;
-	padding: 8px 10px 8px 10px;
+	padding: 8px 30px 8px 10px;
 	font-size: 16px;
+}
+#clearSearch {
+	display: flex;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	line-height: 10px;
+	position: absolute;
+	display: none;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.15);
+	transition: background-color 0.3s;
+	right: 5px;
+	cursor: pointer;
+}
+#searchBar.value #clearSearch {
+	display: block;
+}
+#clearSearch:hover{
+	background: rgba(0, 0, 0, 0.3);
+}
+header.darkMode #clearSearch {
+	background: rgba(255, 255, 255, 0.15);
+	color: #ddd;
+}
+header.darkMode #clearSearch:hover {
+	background: rgba(255,255,255,0.3);
 }
 #menuButton{
 	display: flex;
@@ -94,7 +125,6 @@ header.darkMode input {
 	width: 100%;
 	border-radius: 1px;
 }
-
 #menuButton span::before, #menuButton span::after{
 	content: "";
 	display: inline-block;
