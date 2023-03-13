@@ -343,10 +343,10 @@ footer.darkMode{
 	margin: 2px;
 	cursor: pointer;
 }
-#filterAllOn{
+#filterAllOn, #checkToggle{
 	background: green;
 }
-#filterAllOff{
+#filterAllOff, #uncheckToggle{
 	background: #222;
 }
 #shinyLockToggle{background: #907200;}
@@ -426,7 +426,7 @@ footer.darkMode{
 .textwater{background: #2e78ba;}
 
 .textbug, .textdark, .textdragon, .textelectric, .textfairy, .textfighting, .textfire, .textflying, .textghost,
-.textgrass, .textground, .textice, .textnormal, .textpoison, .textpsychic, .textrock, .textsteel, .textwater, #formToggle, #shinyLockToggle {
+.textgrass, .textground, .textice, .textnormal, .textpoison, .textpsychic, .textrock, .textsteel, .textwater, #formToggle, #shinyLockToggle, #checkToggle, #uncheckToggle {
 	cursor: pointer;
 	transition: background-color 0.5s ease;
 }
