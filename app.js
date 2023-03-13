@@ -157,9 +157,48 @@ function settingToggle(s){
 		localStorage.setItem("settingForm", skipForms);
 	}
 	allFilter("on");
+	document.getElementById("checkToggle").classList.remove("grayOn");
+	document.getElementById("uncheckToggle").classList.remove("grayOn");
 	pokeList();
 	loadData();
 	updateData();
+}
+
+function checkToggle(c) {
+	if (c === "checked") {
+		let button = document.getElementById("checkToggle");
+		if (button.classList.contains("grayOn")) {
+			document.querySelectorAll("#pokeList > li.grayOn").forEach(function(i) {
+				document.getElementById(i.id).style.display = "flex";
+				button.classList.remove("grayOn");
+				button.innerText = "Checked Pokémon: Shown";
+			});
+		} else {
+			document.querySelectorAll("#pokeList > li.grayOn").forEach(function(i) {
+				document.getElementById(i.id).style.display = "none";
+				button.classList.add("grayOn");
+				button.innerText = "Checked Pokémon: Hidden";
+			});
+		}
+	}
+
+	if (c === "unchecked") {
+		let button = document.getElementById("uncheckToggle");
+
+		if (button.classList.contains("grayOn")) {
+			document.querySelectorAll("#pokeList > li:not(.grayOn)").forEach(function(i) {
+				document.getElementById(i.id).style.display = "flex";
+				button.classList.remove("grayOn");
+				button.innerText = "Unchecked Pokémon: Hidden";
+			});
+		} else {
+			document.querySelectorAll("#pokeList > li:not(.grayOn)").forEach(function(i) {
+				document.getElementById(i.id).style.display = "none";
+				button.classList.add("grayOn");
+				button.innerText = "Unchecked Pokémon: Hidden";
+			});
+		}
+	}
 }
 
 var search = document.getElementById("pokeSearch");
