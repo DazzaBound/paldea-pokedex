@@ -168,13 +168,13 @@ function checkToggle(c) {
 	if (c === "checked") {
 		let button = document.getElementById("checkToggle");
 		if (button.classList.contains("grayOn")) {
-			document.querySelectorAll("#pokeList > li.grayOn").forEach(function(i) {
+			document.querySelectorAll("#pokeList > li:not(.grayOn)").forEach(function(i) {
 				document.getElementById(i.id).style.display = "flex";
 				button.classList.remove("grayOn");
 				button.innerText = "Checked Pokémon: Shown";
 			});
 		} else {
-			document.querySelectorAll("#pokeList > li.grayOn").forEach(function(i) {
+			document.querySelectorAll("#pokeList > li:not(.grayOn)").forEach(function(i) {
 				document.getElementById(i.id).style.display = "none";
 				button.classList.add("grayOn");
 				button.innerText = "Checked Pokémon: Hidden";
@@ -186,13 +186,13 @@ function checkToggle(c) {
 		let button = document.getElementById("uncheckToggle");
 
 		if (button.classList.contains("grayOn")) {
-			document.querySelectorAll("#pokeList > li:not(.grayOn)").forEach(function(i) {
+			document.querySelectorAll("#pokeList > li.grayOn").forEach(function(i) {
 				document.getElementById(i.id).style.display = "flex";
 				button.classList.remove("grayOn");
-				button.innerText = "Unchecked Pokémon: Hidden";
+				button.innerText = "Unchecked Pokémon: Shown";
 			});
 		} else {
-			document.querySelectorAll("#pokeList > li:not(.grayOn)").forEach(function(i) {
+			document.querySelectorAll("#pokeList > li.grayOn").forEach(function(i) {
 				document.getElementById(i.id).style.display = "none";
 				button.classList.add("grayOn");
 				button.innerText = "Unchecked Pokémon: Hidden";
