@@ -84,50 +84,6 @@ async function getPkmn(){
 	pkmn = await res.json();
 }
 
-function filter(f){
-	if(!filterArray.includes(f)){
-		filterArray.push(f);
-		document.getElementById("filter"+f).classList.add("grayOn");
-	} else {
-		filterArray.splice(filterArray.indexOf(f), 1);
-		document.getElementById("filter"+f).classList.remove("grayOn");
-	}
-	document.querySelectorAll("#pokeList > li").forEach(function(i){
-		let t = document.querySelectorAll("#types"+i.id+" > div")
-		let t1 = t[0].innerText.toLowerCase();
-		let t2 = "";
-		if (t.length === 2){
-			t2 = t[1].innerText.toLowerCase();
-		}
-	if((filterArray.includes(t1) && filterArray.includes(t2)) || (filterArray.includes(t1) && t.length === 1)){
-			document.getElementById(i.id).style.display = "none";
-		} else {
-			document.getElementById(i.id).style.display = "flex";
-		}
-	});
-}
-
-function allFilter(t) {
-	if (t === "off") {
-		filterArray = ["bug", "dark", "dragon", "electric", "fairy", "fire", "fighting", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water"];
-		filterArray.forEach(function(f) {
-			document.getElementById("filter"+f).classList.add("grayOn");
-		});
-		document.querySelectorAll("#pokeList > li").forEach(function(i) {
-			document.getElementById(i.id).style.display = "none";
-		});
-	}
-	if (t === "on") {
-		filterArray.forEach(function(f) {
-			document.getElementById("filter"+f).classList.remove("grayOn");
-		});
-		filterArray = [];
-		document.querySelectorAll("#pokeList > li").forEach(function(i) {
-			document.getElementById(i.id).style.display = "flex";
-		});
-	}
-}
-
 function settingToggle(s){
 	if (s === "shiny") {
 		let button = document.getElementById("shinyLockToggle");
@@ -169,13 +125,11 @@ function checkToggle(c) {
 		let button = document.getElementById("checkToggle");
 		if (button.classList.contains("grayOn")) {
 			document.querySelectorAll("#pokeList > li:not(.grayOn)").forEach(function(i) {
-				document.getElementById(i.id).style.display = "flex";
 				button.classList.remove("grayOn");
 				button.innerText = "Checked Pokémon: Shown";
 			});
 		} else {
 			document.querySelectorAll("#pokeList > li:not(.grayOn)").forEach(function(i) {
-				document.getElementById(i.id).style.display = "none";
 				button.classList.add("grayOn");
 				button.innerText = "Checked Pokémon: Hidden";
 			});
@@ -187,18 +141,81 @@ function checkToggle(c) {
 
 		if (button.classList.contains("grayOn")) {
 			document.querySelectorAll("#pokeList > li.grayOn").forEach(function(i) {
-				document.getElementById(i.id).style.display = "flex";
 				button.classList.remove("grayOn");
 				button.innerText = "Unchecked Pokémon: Shown";
 			});
 		} else {
 			document.querySelectorAll("#pokeList > li.grayOn").forEach(function(i) {
-				document.getElementById(i.id).style.display = "none";
 				button.classList.add("grayOn");
 				button.innerText = "Unchecked Pokémon: Hidden";
 			});
 		}
 	}
+	filterList();
+}
+
+function filter(f){
+	if(!filterArray.includes(f)){
+		filterArray.push(f);
+		document.getElementById("filter"+f).classList.add("grayOn");
+	} else {
+		filterArray.splice(filterArray.indexOf(f), 1);
+		document.getElementById("filter"+f).classList.remove("grayOn");
+	}
+	filterList();
+}
+
+function allFilter(t) {
+	if (t === "off") {
+		filterArray = ["bug", "dark", "dragon", "electric", "fairy", "fire", "fighting", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water"];
+		filterArray.forEach(function(f) {
+			document.getElementById("filter"+f).classList.add("grayOn");
+		});
+		document.getElementById("checkToggle").classList.remove("grayOn");
+		document.getElementById("uncheckToggle").classList.remove("grayOn");
+	}
+	if (t === "on") {
+		filterArray.forEach(function(f) {
+			document.getElementById("filter"+f).classList.remove("grayOn");
+		});
+		filterArray = [];
+		document.getElementById("checkToggle").classList.remove("grayOn");
+		document.getElementById("uncheckToggle").classList.remove("grayOn");
+	}
+	filterList();
+}
+
+
+function filterList() {
+	let checked = "";
+	let unchecked = "";
+	document.querySelectorAll("#pokeList > li").forEach(function(i) {
+
+		if (document.getElementById("checkToggle").classList.contains("grayOn")) {
+			checked = "hide";
+		} else {
+			checked = "show";
+		}
+		if (document.getElementById("uncheckToggle").classList.contains("grayOn")) {
+			unchecked = "hide";
+		} else {
+			unchecked = "show";
+		}
+		let type = document.querySelectorAll("#types"+i.id+" > div")
+		let type1 = type[0].innerText.toLowerCase();
+		let type2 = "";
+		if (type.length === 2){
+			type2 = type[1].innerText.toLowerCase();
+		}
+	if(	(filterArray.includes(type1) && filterArray.includes(type2)) ||
+		(filterArray.includes(type1) && type.length === 1) ||
+		(checked === "hide" && !i.classList.contains("grayOn")) ||
+		(unchecked === "hide" && i.classList.contains("grayOn"))){
+			document.getElementById(i.id).style.display = "none";
+		} else {
+			document.getElementById(i.id).style.display = "flex";
+		}
+	});
 }
 
 var search = document.getElementById("pokeSearch");
