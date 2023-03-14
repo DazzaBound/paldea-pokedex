@@ -170,7 +170,7 @@ header.darkMode #menuButton span, header.darkMode #menuButton span::before, head
 #menuButton:hover span::after {
     transform: translate(-50%,12px)
 }
-#menuContainer {
+#menuContainer, #boxesContainer {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -181,12 +181,17 @@ header.darkMode #menuButton span, header.darkMode #menuButton span::before, head
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.3s, visibility 0.3s;
-	z-index: 10;
+	z-index: 3;
 }
-body.darkMode #menuContainer {
+#boxesContainer {
+	display: flex;
+	justify-content: center;
+	z-index: 1;
+}
+body.darkMode #menuContainer, body.darkMode #boxesContainer {
 	background-color: rgba(0, 0, 0, 0.7);
 }
-#menuContainer.open {
+#menuContainer.open, #boxesContainer.open{
 	visibility: visible;
 	opacity: 1;
 }
@@ -197,7 +202,6 @@ body.darkMode #menuContainer {
 }
 #menuOptions{
 	display:flex;
-	margin-left: auto;
 	align-items: center;
 }
 #menuClose{
@@ -269,12 +273,15 @@ footer.darkMode{
 #credit.darkMode a{
 	color: #ddd;
 }
-#menuOptions svg{
+#menuContents svg{
 	margin-right: 5px;
 	stroke: #444;
-	transition: stroke 0.5s ease-in;
+	transition: stroke 0.3s ease-in;
 }
-#menuOptions svg.darkMode {
+#toggleIcon {
+	margin-left: auto;
+}
+#menuContents.darkMode svg {
 	stroke: #ddd;
 }
 #themeToggle {
@@ -308,6 +315,7 @@ footer.darkMode{
 	background: #26292e;
 }
 #pokeList{
+	position: relative;
 	margin: 5px 10px 25px 10px;
 	font-weight: 500;
 	display: flex;
@@ -355,6 +363,11 @@ footer.darkMode{
 #settingsContainer{
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
+}
+#boxView {
+	display:flex;
+	align-items: center;
+	cursor: pointer;
 }
 .container{
 	display: flex;
@@ -441,6 +454,61 @@ footer.darkMode{
 }
 #settingsContainer > .grayOn, #typeFilter > .grayOn{
 	background: #bbb !important;
+}
+
+#boxDisplay {
+	display: flex;
+	top: 56px;
+	padding-bottom: 38px;
+	bottom: 0;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	position: absolute;
+	max-height: 100%;
+	overflow: scroll;
+	max-width: 960px;
+	scrollbar-width: none;
+}
+#boxDisplay::-webkit-scrollbar, body::-webkit-scrollbar{
+    display: none;
+  }
+.gridParent {
+	display: grid;
+	font-size: 15px;
+	font-weight: 500;
+	background: #26292e;
+	box-shadow: 0 2px 0 0 rgba(0,0,0,0.4);
+	grid-template-columns: repeat(6, 40px);
+	grid-template-rows: 1em repeat(5, 40px);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 5px;
+}
+.gridParent div {
+	display: flex;
+	width: 30px;
+	height: 30px;
+	justify-content: center;
+	align-content: center;
+	object-fit: contain;
+	background:rgba(255, 255, 255, 0.15);
+	box-shadow: 0 2px 0 0 rgba(0,0,0,0.4);
+	border-radius: 8px;
+	padding: 5px;
+}
+.gridParent img{
+	max-width: 35px;
+	max-height: 35px;
+	object-fit: contain;
+}
+.boxTitle { 
+	grid-area: 1 / 1 / 2 / 7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ddd;
 }
 
 @media(max-width: 575px) {
