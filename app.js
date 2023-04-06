@@ -37,7 +37,7 @@ function addCard(i){
 
 	let card = document.createElement("li");
 	card.id = pkmnID;
-	card.innerHTML = "<img class='image' src='icons/"+pkmnID+".png'><div class='info'><div class='name'>"+pkmnName+"</div><div class= 'types' id= 'types"+pkmnID+"'></div>";
+	card.innerHTML = "<img class='image' src='icons/"+pkmnID+".png' title='#"+String(pkmnID).replace(/\D/g, '').padStart(3,'0')+"'><div class='info'><div class='name'>"+pkmnName+"</div><div class= 'types' id= 'types"+pkmnID+"'></div>";
 	card.onclick = function(){document.getElementById(pkmnID).classList.toggle("grayOn"); updateData()};
 	card.classList.add("grayOn","container");
 	document.getElementById("pokeList").append(card);
