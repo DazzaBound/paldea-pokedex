@@ -60,21 +60,46 @@ header.darkMode, #credit.darkMode {
 header.darkMode input {
 	color: #ddd;
 }
-#searchBar{
+#searchBar, #shareCont{
 	display: flex;
 	position: relative;
 	align-items: center;
 	width: 100%;
+}
+#searchBar{
 	margin-left: 20px;
 }
-#pokeSearch{
+#pokeSearch, #shareCode{
 	display: inline-block;
 	width: 100%;
 	padding: 8px 30px 8px 10px;
 	font-size: 16px;
+	line-height: 20px;
 	background: #eee;
 	border-radius: 8px 0 0 8px;
 }
+#shareCode{
+	height: 24px;
+	padding: 5px 10px 5px 10px;
+}
+.confirmDisplay{
+	animation: fadeOut 1s ease; 
+}
+#cbConfirm{
+	opacity: 0;
+	font-size: 12px;
+	text-align: right;
+	float: right;
+}
+
+
+@keyframes fadeOut {
+	0% {display: inline; opacity: 1}
+	50% {display: inline; opacity: 1}
+	99% {display: inline; opacity: 0}
+	100% {display: none; opacity: 0}
+}
+
 #clearSearch {
 	display: flex;
 	width: 20px;
@@ -95,7 +120,7 @@ header.darkMode input {
 #clearSearch:hover{
 	background: rgba(0, 0, 0, 0.3);
 }
-#searchButton {
+#searchButton, #shareButton {
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -106,8 +131,9 @@ header.darkMode input {
 	background: #eee;
 	border-radius: 0 8px 8px 0;
 }
-header.darkMode #pokeSearch, header.darkMode #searchButton {
+header.darkMode #pokeSearch, header.darkMode #searchButton, #menuContents.darkMode #shareCode, #menuContents.darkMode #shareButton {
 	background:#36393f;
+	color: #ddd;
 }
 header svg {
 	stroke: #444;
@@ -170,7 +196,7 @@ header.darkMode #menuButton span, header.darkMode #menuButton span::before, head
 #menuButton:hover span::after {
     transform: translate(-50%,12px)
 }
-#menuContainer, #boxesContainer {
+#menuContainer, #boxesContainer, #shareContainer {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -183,15 +209,18 @@ header.darkMode #menuButton span, header.darkMode #menuButton span::before, head
 	transition: opacity 0.3s, visibility 0.3s;
 	z-index: 3;
 }
-#boxesContainer {
+#shareContainer{
+	display: inline;
+}
+#boxesContainer, #shareContainer {
 	display: flex;
 	justify-content: center;
 	z-index: 1;
 }
-body.darkMode #menuContainer, body.darkMode #boxesContainer {
+body.darkMode #menuContainer, body.darkMode #boxesContainer, body.darkMode #shareContainer {
 	background-color: rgba(0, 0, 0, 0.7);
 }
-#menuContainer.open, #boxesContainer.open{
+#menuContainer.open, #boxesContainer.open, #shareContainer.open{
 	visibility: visible;
 	opacity: 1;
 }
@@ -469,7 +498,7 @@ footer.darkMode{
 	max-width: 960px;
 	scrollbar-width: none;
 }
-#boxDisplay::-webkit-scrollbar, body::-webkit-scrollbar{
+#boxDisplay::-webkit-scrollbar,#shareDisplay::-webkit-scrollbar, body::-webkit-scrollbar{
     display: none;
   }
 .gridParent {
@@ -509,6 +538,53 @@ footer.darkMode{
 	justify-content: center;
 	align-items: center;
 	color: #ddd;
+}
+
+#shareDisplay {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 15px;
+	font-weight: 500;
+	margin: 5px;
+	top: 56px;
+	padding-bottom: 38px;
+	bottom: 0;
+	justify-content: center;
+	position: absolute;
+	max-height: 100%;
+	overflow: scroll;
+	max-width: 960px;
+	scrollbar-width: none;
+}
+
+.shareTag {
+	display: flex;
+	align-items: center;
+	height: 30px;
+	min-width: 150px;
+	background:rgba(84,87,92,255);
+	box-shadow: 0 2px 0 0 rgba(0,0,0,0.4);
+	border-radius: 8px;
+	padding: 5px;
+	margin: 4px;
+	color: #ddd;
+	filter: grayscale(100%);
+}
+
+.shareTag img {
+	max-width: 35px;
+	max-height: 35px;
+	object-fit: contain;
+}
+
+.shareTag span {
+	margin-left: 8px;
+}
+
+#shareDisplay .check {
+	filter: grayscale(0%);
+	background: #4c6857;
+	box-shadow: 0 2px 0 0 rgba(0,0,0,0.4), inset 0 0 0 2px rgb(82, 158, 63);
 }
 
 @media(max-width: 575px) {
