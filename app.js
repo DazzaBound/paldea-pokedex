@@ -258,10 +258,10 @@ function shareBuilder() {
 		}
 		if(i.alternateForm !== undefined){
 			i.alternateForm.forEach(function(i){
-				if (localStorage.getItem("saveID"+i.id) == "true") {
-					shareLink += "0";
-				} else {
+				if (localStorage.getItem("saveID"+i.id) !== "true") {
 					shareLink += "1";
+				} else {
+					shareLink += "0";
 				}
 			});
 		}
