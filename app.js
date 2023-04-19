@@ -6,6 +6,7 @@ let skipLocked = "no";
 let skipForms = "true";
 
 let code = new URLSearchParams(window.location.search).get("l");
+console.log(code);
 
 window.onload = async function() {
 	await getPkmn();
@@ -258,17 +259,16 @@ function shareBuilder() {
 		}
 		if(i.alternateForm !== undefined){
 			i.alternateForm.forEach(function(i){
-				if (localStorage.getItem("saveID"+i.id) !== "true") {
-					shareLink += "1";
-				} else {
+				if (localStorage.getItem("saveID"+i.id) != "false") {
 					shareLink += "0";
+				} else {
+					shareLink += "1";
 				}
 			});
 		}
 	});
-	compressedShare = LZString.compress(shareLink);
-	tinyShare = LZString.compressToEncodedURIComponent(compressedShare);
-	document.getElementById("shareCode").value = "https://dazzabound.github.io/paldea-pokedex/?l="+tinyShare;
+	compressedShare = LZString.compressToEncodedURIComponent(shareLink)
+	document.getElementById("shareCode").value = "https://dazzabound.github.io/paldea-pokedex/?l="+compressedShare;
 }
 
 // -------- SEARCH BAR --------- //
@@ -358,8 +358,6 @@ function buildShare() {
 	document.body.classList.add("fixed");
 	document.getElementById("shareDisplay").innerHTML = "";
 	tagNo = 0;
-	shareCode = LZString.decompressFromEncodedURIComponent(code);
-	uncompressedCode = LZString.decompress(shareCode);
 	pkmn.forEach(function(i){
 		addTag(i);
 		if(i.alternateForm !== undefined){
@@ -375,7 +373,9 @@ function addTag(i) {
 	tag.classList.add("shareTag");
 	tag.innerHTML = "<img src='icons/"+i.id+".png'>"+"<span>"+i.name+"</span>";
 
-	if(uncompressedCode.substr(tagNo,1)==1) {
+	shareCode = LZString.decompressFromEncodedURIComponent(code);
+
+	if(shareCode.substr(tagNo,1)==1) {
 		tag.classList.add("check")
 	}
 
