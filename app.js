@@ -5,6 +5,9 @@ let filterArray = [];
 let skipLocked = "no";
 let skipForms = "true";
 
+let code = new URLSearchParams(window.location.search).get("l");
+console.log(code);
+
 window.onload = async function() {
 	await getPkmn();
 	console.log(pkmn);
@@ -14,6 +17,9 @@ window.onload = async function() {
 	loadData();
 	updateData();
 	document.getElementById("menuContainer").style.display = "block";
+	if(code !== null) {
+		buildShare();
+	}
 }
 
 function pokeList(){
@@ -51,6 +57,7 @@ function updateData(){
 	unchecked = (document.querySelectorAll("#pokeList .grayOn").length-document.querySelectorAll("#pokeList > li").length)*-1;
 	document.getElementById("counter").innerHTML = unchecked +"/"+document.querySelectorAll("#pokeList > li").length;
 	saveData();
+	shareBuilder();
 }
 
 function loadData(){
@@ -231,6 +238,38 @@ function closeMenu() {
 	document.body.classList.remove("fixed");
 }
 
+function copyShare() {
+	var copyText = document.getElementById("shareCode");
+	copyText.select();
+	copyText.setSelectionRange(0,99999);
+	navigator.clipboard.writeText(copyText.value);
+	document.getElementById("cbConfirm").classList.add("confirmDisplay");
+	setTimeout(function(){
+		document.getElementById("cbConfirm").classList.remove("confirmDisplay");
+	}, 1000);
+}
+
+function shareBuilder() {
+	var shareLink = "";
+	pkmn.forEach(function(i){
+		if (localStorage.getItem("saveID"+i.id) == "true") {
+			shareLink += "0";
+		} else {
+			shareLink += "1";
+		}
+		if(i.alternateForm !== undefined){
+			i.alternateForm.forEach(function(i){
+				if (localStorage.getItem("saveID"+i.id) == "true") {
+					shareLink += "0";
+				} else {
+					shareLink += "1";
+				}
+			});
+		}
+	});
+	compressedShare = LZString.compressToEncodedURIComponent(shareLink)
+	document.getElementById("shareCode").value = "https://dazzabound.github.io/paldea-pokedex/?l="+compressedShare;
+}
 
 // -------- SEARCH BAR --------- //
 
@@ -276,7 +315,7 @@ function buildBoxes() {
 	document.body.classList.add("fixed");
 	document.getElementById("boxDisplay").innerHTML = "";
 
-	let boxLables = ["#001 - #030","#031 - #060","#061 - #090","#091 - #120","#1211 - #150","#151 - #180","#181 - #210","#211 - #240","#241 - #270","#271 - #300","#301 - #330","#331 - #360","#361 - #390","#391 - #400"]
+	let boxLables = ["#001 - #030","#031 - #060","#061 - #090","#091 - #120","#121 - #150","#151 - #180","#181 - #210","#211 - #240","#241 - #270","#271 - #300","#301 - #330","#331 - #360","#361 - #390","#391 - #400"]
 
 	for (let i = 1; i <= 400 ; i++) {
 		
@@ -309,6 +348,45 @@ function closeBoxes() {
 	document.getElementById("boxesContainer").classList.remove("open");
 	document.body.classList.remove("fixed");
 	document.getElementById("boxDisplay").innerHTML = "";
+}
+
+// -------- SHARE VIEW --------- //
+
+function buildShare() {
+	closeMenu()
+	document.getElementById("shareContainer").classList.add("open");
+	document.body.classList.add("fixed");
+	document.getElementById("shareDisplay").innerHTML = "";
+	tagNo = 0;
+	pkmn.forEach(function(i){
+		addTag(i);
+		if(i.alternateForm !== undefined){
+			i.alternateForm.forEach(function(i){
+				addTag(i);
+			});
+		}
+	});
+}
+
+function addTag(i) {
+	let tag = document.createElement("div");
+	tag.classList.add("shareTag");
+	tag.innerHTML = "<img src='icons/"+i.id+".png'>"+"<span>"+i.name+"</span>";
+
+	shareCode = LZString.decompressFromEncodedURIComponent(code);
+
+	if(shareCode.substr(tagNo,1)==1) {
+		tag.classList.add("check")
+	}
+
+	document.getElementById("shareDisplay").appendChild(tag);
+	tagNo += 1
+}
+
+function closeShare() {
+	document.getElementById("shareContainer").classList.remove("open");
+	document.body.classList.remove("fixed");
+	document.getElementById("shareDisplay").innerHTML = "";
 }
 
 // -------- THEME SELECTOR --------- //
