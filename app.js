@@ -271,6 +271,86 @@ function shareBuilder() {
 	document.getElementById("shareCode").value = "https://dazzabound.github.io/paldea-pokedex/?l="+compressedShare;
 }
 
+function openDialogue(t) {
+	document.getElementById("dialogueCont").classList.add("open");
+	document.body.classList.add("fixed");
+	if(t=== "import") {
+		if(code !== null) {
+			document.getElementById("dialogue").innerHTML = "<div>Import Pokédex?</div><p>This will OVERWRITE your saved data with the data included in the share link. Are you sure you wish to continue?</p>";
+			let dialogueControls = document.createElement("div");
+			dialogueControls.id = "dialogueControls";
+			dialogueControls.innerHTML = "<div class='btn cancel' onclick='closeDialogue()'>Cancel</div><div class='btn import' onclick='importData()'>Import</div>";
+			document.getElementById("dialogueCont").append(dialogue);
+			document.getElementById("dialogue").append(dialogueControls);
+		} else {
+			document.getElementById("dialogue").innerHTML = "<div>Import Pokédex?</div><p>Please load the site using a share link to use the import feature.</p>";
+			let dialogueControls = document.createElement("div");
+			dialogueControls.id = "dialogueControls";
+			dialogueControls.innerHTML = "<div class='btn cancel' onclick='closeDialogue()'>Close</div>";
+			document.getElementById("dialogueCont").append(dialogue);
+			document.getElementById("dialogue").append(dialogueControls);
+		}
+	}
+	if(t === "clear") {
+		document.getElementById("dialogue").innerHTML = "<div>Clear Pokédex?</div><p>This will DELETE all of your saved data permanently. Are you sure you wish to continue?</p>";
+		let dialogueControls = document.createElement("div");
+		dialogueControls.id = "dialogueControls";
+		dialogueControls.innerHTML = "<div class='btn cancel' onclick='closeDialogue()'>Cancel</div><div class='btn delete' onclick='clearData()'>Delete</div>";
+		document.getElementById("dialogueCont").append(dialogue);
+		document.getElementById("dialogue").append(dialogueControls);
+	}
+}
+
+function closeDialogue() {
+	document.getElementById("dialogueCont").classList.remove("open");
+	document.body.classList.remove("fixed");
+	document.getElementById("dialogue").innerHTML = "";
+}
+
+function importData() {
+	importCode= LZString.decompressFromEncodedURIComponent(code);
+	var indx = 0;
+	pkmn.forEach(function(i){
+		if(importCode.substr(indx,1)== "1") {
+			localStorage.setItem("saveID"+i.id, "false");
+		} else {
+			localStorage.setItem("saveID"+i.id, "true");
+		}
+		indx += 1;
+		if(i.alternateForm !== undefined){
+			i.alternateForm.forEach(function(i){
+				if(importCode.substr(indx,1)==1) {
+					localStorage.setItem("saveID"+i.id, "false");
+				} else {
+					localStorage.setItem("saveID"+i.id, "true");
+				}
+			indx += 1;
+			});
+			
+		}
+	});
+	pokeList();
+	loadData();
+	updateData();
+	closeDialogue();
+	closeMenu();
+}
+
+function clearData() {
+	pkmn.forEach(function(i){
+		localStorage.setItem("saveID"+i.id, "true");
+		if(i.alternateForm !== undefined){
+			i.alternateForm.forEach(function(i){
+				localStorage.setItem("saveID"+i.id, "true");
+			});
+		}
+	});
+	pokeList();
+	updateData();
+	closeDialogue();
+	closeMenu();
+}
+
 // -------- SEARCH BAR --------- //
 
 var search = document.getElementById("pokeSearch");
