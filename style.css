@@ -298,15 +298,19 @@ body.darkMode #menuContainer, body.darkMode #boxesContainer, body.darkMode #shar
 	background: #ddd;
 }
 #menuContents{
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
 	font-size: 20px;
 	display: flex;
 	flex-flow: column;
 	width: 260px;
-	height: 100%;
 	float: right;
 	background: #f4f4f4;
 	padding: 20px 20px 20px 20px;
-	overflow: auto;
+	overflow: scroll;
+	scrollbar-width: none;
 	transform: translateX(100%);
 	transition: background-color 0.3s, transform 0.3s;
 }
@@ -548,7 +552,7 @@ footer.darkMode{
 	max-width: 960px;
 	scrollbar-width: none;
 }
-#boxDisplay::-webkit-scrollbar,#shareDisplay::-webkit-scrollbar, body::-webkit-scrollbar{
+#boxDisplay::-webkit-scrollbar,#shareDisplay::-webkit-scrollbar, body::-webkit-scrollbar, #menuContents::-webkit-scrollbar{
     display: none;
   }
 .gridParent {
