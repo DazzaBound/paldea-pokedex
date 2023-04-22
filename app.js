@@ -9,8 +9,6 @@ let urlParams = new URLSearchParams(window.location.search);
 
 let code = urlParams.get("l");
 console.log(code)
-console.log(urlParams.has("forms"));
-console.log(urlParams.has("locked"));
 
 window.onload = async function() {
 	await getPkmn();
@@ -281,8 +279,6 @@ function shareBuilder() {
 	if (localStorage.getItem("settingForm") !== "yes") {
 		shareForm = "&forms"
 	}
-	console.log("Share Shinies? - "+shareShiny);
-	console.log("Share Forms? - "+shareForm);
 	document.getElementById("shareCode").value = "https://dazzabound.github.io/paldea-pokedex/?l="+compressedShare+shareForm+shareShiny;
 }
 
@@ -455,15 +451,23 @@ function buildShare() {
 	tagNo = 0;
 	
 	pkmn.forEach(function(i){
-		if(urlParams.has("locked") || i.shinyLocked !== true) {
+		if(i.shinyLocked !== true) {
 			addTag(i);
-		}
-		if(urlParams.has("forms") && i.alternateForm !== undefined){
-			i.alternateForm.forEach(function(i){
+		} else {
+			if(urlParams.has("locked")){
 				addTag(i);
+			} else {tagNo += 1}
+		}
+
+		if(i.alternateForm !== undefined){
+			i.alternateForm.forEach(function(i){
+				if(urlParams.has("forms")){
+					addTag(i);
+				} else (tagNo += 1)
 			});
 		}
 	});
+	
 	let subtitleShiny = "Hidden";
 	let subtitleForms = "Hidden";
 	if(urlParams.has("locked")){subtitleShiny = "Shown"};
