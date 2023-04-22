@@ -5,8 +5,12 @@ let filterArray = [];
 let skipLocked = "no";
 let skipForms = "true";
 
-let code = new URLSearchParams(window.location.search).get("l");
-console.log(code);
+let urlParams = new URLSearchParams(window.location.search);
+
+let code = urlParams.get("l");
+console.log(code)
+console.log(urlParams.has("forms"));
+console.log(urlParams.has("locked"));
 
 window.onload = async function() {
 	await getPkmn();
@@ -268,7 +272,18 @@ function shareBuilder() {
 		}
 	});
 	compressedShare = LZString.compressToEncodedURIComponent(shareLink)
-	document.getElementById("shareCode").value = "https://dazzabound.github.io/paldea-pokedex/?l="+compressedShare;
+	let shareShiny = "";
+	let shareForm = "";
+
+	if (localStorage.getItem("settingShiny") !== "yes") {
+		shareShiny = "&locked"
+	}
+	if (localStorage.getItem("settingForm") !== "yes") {
+		shareForm = "&forms"
+	}
+	console.log("Share Shinies? - "+shareShiny);
+	console.log("Share Forms? - "+shareForm);
+	document.getElementById("shareCode").value = "https://dazzabound.github.io/paldea-pokedex/?l="+compressedShare+shareForm+shareShiny;
 }
 
 function openDialogue(t) {
@@ -436,16 +451,25 @@ function buildShare() {
 	closeMenu()
 	document.getElementById("shareContainer").classList.add("open");
 	document.body.classList.add("fixed");
-	document.getElementById("shareDisplay").innerHTML = "";
+	document.getElementById("shareDisplay").innerHTML = "<div id='shareTitle'></div>";
 	tagNo = 0;
+	
 	pkmn.forEach(function(i){
-		addTag(i);
-		if(i.alternateForm !== undefined){
+		if(urlParams.has("locked") || i.shinyLocked !== true) {
+			addTag(i);
+		}
+		if(urlParams.has("forms") && i.alternateForm !== undefined){
 			i.alternateForm.forEach(function(i){
 				addTag(i);
 			});
 		}
 	});
+	let subtitleShiny = "Hidden";
+	let subtitleForms = "Hidden";
+	if(urlParams.has("locked")){subtitleShiny = "Shown"};
+	if(urlParams.has("forms")){subtitleForms = "Shown"};
+	document.getElementById("shareTitle").innerText = "Share List Completion: "+document.querySelectorAll("#shareDisplay .check").length+"/"+document.querySelectorAll("#shareDisplay .shareTag").length;
+	document.getElementById("shareTitle").innerHTML += "<div id='shareSubtitle'>| Shiny Locked: "+subtitleShiny+" | Alternate Forms: "+subtitleForms+" |</div>"
 }
 
 function addTag(i) {
