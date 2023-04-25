@@ -419,6 +419,7 @@ footer.darkMode{
 	right: 3px;
 	display: flex;
 	justify-content: center;
+	color: #ddd
 	font-size: 12px;
 	font-weight: 700;
 	width: 16px;
