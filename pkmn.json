@@ -719,12 +719,14 @@
 	{
 		"id": 114,
 		"name": "Misdreavus",
-		"type": ["ghost"]
+		"type": ["ghost"],
+		"exclusive": "v"
 	},
 	{
 		"id": 115,
 		"name": "Mismagius",
-		"type": ["ghost"]
+		"type": ["ghost"],
+		"exclusive": "v"
 	},
 	{
 		"id": 116,
@@ -851,12 +853,14 @@
 	{
 		"id": 139,
 		"name": "Gulpin",
-		"type": ["poison"]
+		"type": ["poison"],
+		"exclusive": "v"
 	},
 	{
 		"id": 140,
 		"name": "Swalot",
-		"type": ["poison"]
+		"type": ["poison"],
+		"exclusive": "v"
 	},
 	{
 		"id": 141,
@@ -871,12 +875,14 @@
 	{
 		"id": 143,
 		"name": "Drifloon",
-		"type": ["ghost", "flying"]
+		"type": ["ghost", "flying"],
+		"exclusive": "s"
 	},
 	{
 		"id": 144,
 		"name": "Drifblim",
-		"type": ["ghost", "flying"]
+		"type": ["ghost", "flying"],
+		"exclusive": "s"
 	},
 	{
 		"id": 145,
@@ -1052,12 +1058,14 @@
 	{
 		"id": 166,
 		"name": "Armarouge",
-		"type": ["fire", "psychic"]
+		"type": ["fire", "psychic"],
+		"exclusive": "s"
 	},
 	{
 		"id": 167,
 		"name": "Ceruledge",
-		"type": ["fire", "ghost"]
+		"type": ["fire", "ghost"],
+		"exclusive": "v"
 	},
 	{
 		"id": 168,
@@ -1390,12 +1398,14 @@
 			{
 			"id": "223a",
 			"name": "Tauros (A)",
-			"type": ["fighting", "water"]
+			"type": ["fighting", "water"],
+			"exclusive": "v"
 			},
 			{
 			"id": "223b",
 			"name": "Tauros (B)",
-			"type": ["fighting", "fire"]
+			"type": ["fighting", "fire"],
+			"exclusive": "s"
 			}
 		]
 	},
@@ -1419,12 +1429,14 @@
 	{
 		"id": 226,
 		"name": "Stunky",
-		"type": ["poison", "dark"]
+		"type": ["poison", "dark"],
+		"exclusive": "s"
 	},
 	{
 		"id": 227,
 		"name": "Skuntank",
-		"type": ["poison", "dark"]
+		"type": ["poison", "dark"],
+		"exclusive": "s"
 	},
 	{
 		"id": 228,
@@ -1683,17 +1695,20 @@
 	{
 		"id": 276,
 		"name": "Bagon",
-		"type": ["dragon"]
+		"type": ["dragon"],
+		"exclusive": "v"
 	},
 	{
 		"id": 277,
 		"name": "Shelgon",
-		"type": ["dragon"]
+		"type": ["dragon"],
+		"exclusive": "v"
 	},
 	{
 		"id": 278,
 		"name": "Salamence",
-		"type": ["dragon", "flying"]
+		"type": ["dragon", "flying"],
+		"exclusive": "v"
 	},
 	{
 		"id": 279,
@@ -1828,17 +1843,20 @@
 	{
 		"id": 305,
 		"name": "Dreepy",
-		"type": ["dragon", "ghost"]
+		"type": ["dragon", "ghost"],
+		"exclusive": "v"
 	},
 	{
 		"id": 306,
 		"name": "Drakloak",
-		"type": ["dragon", "ghost"]
+		"type": ["dragon", "ghost"],
+		"exclusive": "v"
 	},
 	{
 		"id": 307,
 		"name": "Dragapult",
-		"type": ["dragon", "ghost"]
+		"type": ["dragon", "ghost"],
+		"exclusive": "v"
 	},
 	{
 		"id": 308,
@@ -1895,12 +1913,14 @@
 	{
 		"id": 313,
 		"name": "Oranguru",
-		"type": ["normal", "psychic"]
+		"type": ["normal", "psychic"],
+		"exclusive": "s"
 	},
 	{
 		"id": 314,
 		"name": "Passimian",
-		"type": ["fighting"]
+		"type": ["fighting"],
+		"exclusive": "v"
 	},
 	{
 		"id": 315,
@@ -1910,27 +1930,32 @@
 	{
 		"id": 316,
 		"name": "Larvitar",
-		"type": ["rock", "ground"]
+		"type": ["rock", "ground"],
+		"exclusive": "s"
 	},
 	{
 		"id": 317,
 		"name": "Pupitar",
-		"type": ["rock", "ground"]
+		"type": ["rock", "ground"],
+		"exclusive": "s"
 	},
 	{
 		"id": 318,
 		"name": "Tyranitar",
-		"type": ["rock", "dark"]
+		"type": ["rock", "dark"],
+		"exclusive": "s"
 	},
 	{
 		"id": 319,
 		"name": "Stonjourner",
-		"type": ["rock"]
+		"type": ["rock"],
+		"exclusive": "s"
 	},
 	{
 		"id": 320,
 		"name": "Eiscue",
-		"type": ["ice"]
+		"type": ["ice"],
+		"exclusive": "v"
 	},
 	{
 		"id": 321,
@@ -2029,22 +2054,26 @@
 	{
 		"id": 337,
 		"name": "Skrelp",
-		"type": ["poison", "water"]
+		"type": ["poison", "water"],
+		"exclusive": "s"
 	},
 	{
 		"id": 338,
 		"name": "Dragalge",
-		"type": ["poison", "dragon"]
+		"type": ["poison", "dragon"],
+		"exclusive": "s"
 	},
 	{
 		"id": 339,
 		"name": "Clauncher",
-		"type": ["water"]
+		"type": ["water"],
+		"exclusive": "v"
 	},
 	{
 		"id": 340,
 		"name": "Clawitzer",
-		"type": ["water"]
+		"type": ["water"],
+		"exclusive": "v"
 	},
 	{
 		"id": 341,
@@ -2194,17 +2223,20 @@
 	{
 		"id": 370,
 		"name": "Deino",
-		"type": ["dark", "dragon"]
+		"type": ["dark", "dragon"],
+		"exclusive": "s"
 	},
 	{
 		"id": 371,
 		"name": "Zweilous",
-		"type": ["dark", "dragon"]
+		"type": ["dark", "dragon"],
+		"exclusive": "s"
 	},
 	{
 		"id": 372,
 		"name": "Hydreigon",
-		"type": ["dark", "dragon"]
+		"type": ["dark", "dragon"],
+		"exclusive": "s"
 	},
 	{
 		"id": 373,
@@ -2358,12 +2390,14 @@
 		"id": 399,
 		"name": "Koraidon",
 		"type": ["dragon", "fighting"],
-		"shinyLocked": true
+		"shinyLocked": true,
+		"exclusive": "s"
 	},
 	{
 		"id": 400,
 		"name": "Miraidon",
 		"type": ["dragon", "electric"],
-		"shinyLocked": true
+		"shinyLocked": true,
+		"exclusive": "v"
 	}
 ]
