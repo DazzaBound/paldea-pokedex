@@ -53,6 +53,19 @@ function addCard(i){
 		card.classList.add(typeClass);
 		document.getElementById("types"+pkmnID).innerHTML += "<div class='text"+typeClass+" typeBox'>"+typeClass.charAt(0).toUpperCase()+typeClass.slice(1)+"</div>"
 	});
+	if(i.exclusive !== null) {
+		let circle = document.createElement("div");
+		circle.classList.add("exc")
+		if(i.exclusive === "s"){
+			circle.classList.add("s");
+			circle.innerText = "S";
+		};
+		if(i.exclusive === "v"){
+			circle.classList.add("v");
+			circle.innerText = "V";
+		};
+		document.getElementById(i.id).appendChild(circle);
+	}
 }
 
 function updateData(){
