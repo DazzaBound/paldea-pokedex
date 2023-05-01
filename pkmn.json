@@ -1520,7 +1520,14 @@
 	{
 		"id": 241,
 		"name": "Indeedee",
-		"type": ["psychic", "normal"]
+		"type": ["psychic", "normal"],
+		"alternateForm": [
+			{
+			"id": "241f",
+			"name": "Indeedee (F)",
+			"type": ["psychic", "normal"]
+			}
+		]
 	},
 	{
 		"id": 242,
