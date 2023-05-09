@@ -2275,62 +2275,74 @@
 	{
 		"id": 376,
 		"name": "Great Tusk",
-		"type": ["ground", "fighting"]
+		"type": ["ground", "fighting"],
+		"exclusive": "s"
 	},
 	{
 		"id": 377,
 		"name": "Scream Tail",
-		"type": ["fairy", "psychic"]
+		"type": ["fairy", "psychic"],
+		"exclusive": "s"
 	},
 	{
 		"id": 378,
 		"name": "Brute Bonnet",
-		"type": ["grass", "dark"]
+		"type": ["grass", "dark"],
+		"exclusive": "s"
 	},
 	{
 		"id": 379,
 		"name": "Flutter Mane",
-		"type": ["ghost", "fairy"]
+		"type": ["ghost", "fairy"],
+		"exclusive": "s"
 	},
 	{
 		"id": 380,
 		"name": "Slither Wing",
-		"type": ["bug", "fighting"]
+		"type": ["bug", "fighting"],
+		"exclusive": "s"
 	},
 	{
 		"id": 381,
 		"name": "Sandy Shocks",
-		"type": ["electric", "ground"]
+		"type": ["electric", "ground"],
+		"exclusive": "s"
 	},
 	{
 		"id": 382,
 		"name": "Iron Treads",
-		"type": ["ground", "steel"]
+		"type": ["ground", "steel"],
+		"exclusive": "v"
 	},
 	{
 		"id": 383,
 		"name": "Iron Bundle",
-		"type": ["ice", "water"]
+		"type": ["ice", "water"],
+		"exclusive": "v"
 	},
 	{
 		"id": 384,
 		"name": "Iron Hands",
-		"type": ["fighting", "electric"]
+		"type": ["fighting", "electric"],
+		"exclusive": "v"
 	},
 	{
 		"id": 385,
 		"name": "Iron Jugulis",
-		"type": ["dark", "flying"]
+		"type": ["dark", "flying"],
+		"exclusive": "v"
 	},
 	{
 		"id": 386,
 		"name": "Iron Moth",
-		"type": ["fire", "poison"]
+		"type": ["fire", "poison"],
+		"exclusive": "v"
 	},
 	{
 		"id": 387,
 		"name": "Iron Thorns",
-		"type": ["rock", "electric"]
+		"type": ["rock", "electric"],
+		"exclusive": "v"
 	},
 	{
 		"id": 388,
@@ -2386,12 +2398,14 @@
 	{
 		"id": 397,
 		"name": "Roaring Moon",
-		"type": ["dragon", "dark"]
+		"type": ["dragon", "dark"],
+		"exclusive": "s"
 	},
 	{
 		"id": 398,
 		"name": "Iron Valiant",
-		"type": ["fairy", "fighting"]
+		"type": ["fairy", "fighting"],
+		"exclusive": "v"
 	},
 	{
 		"id": 399,
