@@ -2362,14 +2362,12 @@
 	{
 		"id": 391,
 		"name": "Gimmighoul",
-		"type": ["ghost"],
-		"shinyLocked": true
+		"type": ["ghost"]
 	},
 	{
 		"id": 392,
 		"name": "Gholdengo",
-		"type": ["ghost", "steel"],
-		"shinyLocked": true
+		"type": ["ghost", "steel"]
 	},
 	{
 		"id": 393,
