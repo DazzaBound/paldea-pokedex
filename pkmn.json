@@ -1775,7 +1775,7 @@
 	{
 		"id": 290,
 		"name": "Bombirdier",
-		"type": ["dark", "flying"]
+		"type": ["flying", "dark"]
 	},
 	{
 		"id": 291,
