@@ -2418,11 +2418,5 @@
 		"type": ["dragon", "electric"],
 		"shinyLocked": true,
 		"exclusive": "v"
-	},
-	{
-		"id": "k1",
-		"name": "Spinarak",
-		"type": ["bug","poison"],
-		"dlc": "teal"
 	}
 ]
