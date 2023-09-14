@@ -360,7 +360,7 @@
 	},
 	{
 		"id": 53,
-		"name": "Wooper",
+		"name": "Wooper (P)",
 		"type": ["poison", "ground"]
 	},
 	{
@@ -2423,6 +2423,612 @@
 		"id": "k1",
 		"name": "Spinarak",
 		"type": ["bug","poison"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k2",
+		"name": "Ariados",
+		"type": ["bug","poison"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k3",
+		"name": "Yanma",
+		"type": ["bug","flying"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k4",
+		"name": "Yanmega",
+		"type": ["bug","flying"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k5",
+		"name": "Wooper",
+		"type": ["water"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k6",
+		"name": "Quagsire",
+		"type": ["water","ground"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k7",
+		"name": "Poochyena",
+		"type": ["dark"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k8",
+		"name": "Mightyena",
+		"type": ["dark"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k9",
+		"name": "Volbeat",
+		"type": ["bug"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k10",
+		"name": "Illumise",
+		"type": ["bug"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k11",
+		"name": "Corphish",
+		"type": ["water"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k12",
+		"name": "Crawdaunt",
+		"type": ["water","dark"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k13",
+		"name": "Sewaddle",
+		"type": ["bug","grass"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k14",
+		"name": "Swadloon",
+		"type": ["bug","grass"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k15",
+		"name": "Leavanny",
+		"type": ["bug","grass"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k16",
+		"name": "Cutiefly",
+		"type": ["bug","fairy"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k17",
+		"name": "Ribombee",
+		"type": ["bug","fairy"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k18",
+		"name": "Ekans",
+		"type": ["poison"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k19",
+		"name": "Arbok",
+		"type": ["poison"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k23",
+		"name": "Bellsprout",
+		"type": ["grass","poison"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k24",
+		"name": "Weepinbell",
+		"type": ["grass","poison"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k25",
+		"name": "Victreebel",
+		"type": ["grass","poison"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k26",
+		"name": "Sentret",
+		"type": ["normal"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k27",
+		"name": "Furret",
+		"type": ["normal"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k36",
+		"name": "Dipplin",
+		"type": ["grass","dragon"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k37",
+		"name": "Vulpix",
+		"type": ["fire"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k38",
+		"name": "Ninetales",
+		"type": ["fire"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k39",
+		"name": "Poliwah",
+		"type": ["water"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k40",
+		"name": "Poliwhirl",
+		"type": ["water"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k41",
+		"name": "Poliwrath",
+		"type": ["water","fighting"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k42",
+		"name": "Politoed",
+		"type": ["water"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k45",
+		"name": "Hoothoot",
+		"type": ["normal","flying"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k46",
+		"name": "Noctowl",
+		"type": ["normal","flying"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k47",
+		"name": "Aipom",
+		"type": ["normal"],
+		"exclusive": "v",
+		"dlc": "teal"
+	},
+	{
+		"id": "k48",
+		"name": "Ambipom",
+		"type": ["normal"],
+		"exclusive": "v",
+		"dlc": "teal"
+	},
+	{
+		"id": "k50",
+		"name": "Swinub",
+		"type": ["ice","ground"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k51",
+		"name": "Piloswine",
+		"type": ["ice","ground"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k52",
+		"name": "Mamoswine",
+		"type": ["ice","ground"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k54",
+		"name": "Seedot",
+		"type": ["grass"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k55",
+		"name": "Nuzleaf",
+		"type": ["grass","dark"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k56",
+		"name": "Shiftry",
+		"type": ["grass","dark"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k68",
+		"name": "Phantump",
+		"type": ["grass","ghost"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k69",
+		"name": "Trevenant",
+		"type": ["grass","ghost"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k76",
+		"name": "Poltchageist",
+		"type": ["grass","ghost"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k77",
+		"name": "Sinistcha",
+		"type": ["grass","ghost"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k80",
+		"name": "Geodude",
+		"type": ["rock","ground"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k81",
+		"name": "Graveler",
+		"type": ["rock","ground"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k82",
+		"name": "Golem",
+		"type": ["rock","ground"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k85",
+		"name": "Timburr",
+		"type": ["fighting"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k86",
+		"name": "Gurdurr",
+		"type": ["fighting"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k87",
+		"name": "Conkeldurr",
+		"type": ["fighting"],
+		"dlc": "teal"
+	},
+	
+	{
+		"id": "k95",
+		"name": "Morpeko",
+		"type": ["electric","dark"],
+		"exclusive": "v",
+		"dlc": "teal"
+	},
+	{
+		"id": "k102",
+		"name": "Munchlax",
+		"type": ["normal"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k103",
+		"name": "Snorlax",
+		"type": ["normal"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k104",
+		"name": "Lotad",
+		"type": ["water","grass"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k105",
+		"name": "Lombre",
+		"type": ["water","grass"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k106",
+		"name": "Ludicolo",
+		"type": ["water","grass"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k107",
+		"name": "Nosepass",
+		"type": ["rock"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k108",
+		"name": "Lotad",
+		"type": ["rock","steel"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k112",
+		"name": "Grubbin",
+		"type": ["bug"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k113",
+		"name": "Charjabug",
+		"type": ["bug","electric"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k114",
+		"name": "Vikavolt",
+		"type": ["bug","electric"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k116",
+		"name": "Sandshrew",
+		"type": ["ground"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k117",
+		"name": "Sandslash",
+		"type": ["ground"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k121",
+		"name": "Gligar",
+		"type": ["ground","flying"],
+		"exclusive": "s",
+		"dlc": "teal"
+	},
+	{
+		"id": "k122",
+		"name": "Gliscor",
+		"type": ["ground","flying"],
+		"exclusive": "s",
+		"dlc": "teal"
+	},
+	{
+		"id": "k127",
+		"name": "Vullaby",
+		"type": ["dark","flying"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k128",
+		"name": "Mandibuzz",
+		"type": ["dark","flying"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k131",
+		"name": "Jangmo-o",
+		"type": ["dragon"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k132",
+		"name": "Hakamo-o",
+		"type": ["dragon","fighting"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k133",
+		"name": "Kommo0o",
+		"type": ["dragon","fighting"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k135",
+		"name": "Koffing",
+		"type": ["poison"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k136",
+		"name": "Weezing",
+		"type": ["poison"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k137",
+		"name": "Mienfoo",
+		"type": ["fighting"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k138",
+		"name": "Mienshao",
+		"type": ["fighting"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k139",
+		"name": "Duskull",
+		"type": ["ghost"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k140",
+		"name": "Dusclops",
+		"type": ["ghost"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k141",
+		"name": "Dusknoir",
+		"type": ["ghost"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k142",
+		"name": "Chingling",
+		"type": ["psychic"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k143",
+		"name": "Chimecho",
+		"type": ["psychic"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k144",
+		"name": "Slugma",
+		"type": ["fire"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k145",
+		"name": "Magcargo",
+		"type": ["fire","rock"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k146",
+		"name": "Litwick",
+		"type": ["ghost","fire"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k147",
+		"name": "Lampent",
+		"type": ["ghost","fire"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k148",
+		"name": "Chandelure",
+		"type": ["ghost","fire"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k151",
+		"name": "Cleffa",
+		"type": ["fairy"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k152",
+		"name": "Clefairy",
+		"type": ["fairy"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k153",
+		"name": "Clefable",
+		"type": ["fairy"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k158",
+		"name": "Feebas",
+		"type": ["water"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k159",
+		"name": "Milotic",
+		"type": ["water"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k167",
+		"name": "Carbink",
+		"type": ["rock","fairy"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k181",
+		"name": "Ducklett",
+		"type": ["water","flying"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k182",
+		"name": "Swanna",
+		"type": ["water","flying"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k185",
+		"name": "Cramorant",
+		"type": ["flying","water"],
+		"exclusive": "s",
+		"dlc": "teal"
+	},
+	{
+		"id": "k195",
+		"name": "Basculegion",
+		"type": ["water","ghost"],
+		"dlc": "teal"
+	},
+	{
+		"id": "k196",
+		"name": "Ursaluna (B)",
+		"type": ["ground","normal"],
+		"shinyLocked": true,
+		"dlc": "teal"
+	},
+	{
+		"id": "k197",
+		"name": "Okidogi",
+		"type": ["poison","fight"],
+		"shinyLocked": true,
+		"dlc": "teal"
+	},
+	{
+		"id": "k198",
+		"name": "Munkidori",
+		"type": ["poison","psychic"],
+		"shinyLocked": true,
+		"dlc": "teal"
+	},
+	{
+		"id": "k199",
+		"name": "Fezandipiti",
+		"type": ["poison","fairy"],
+		"shinyLocked": true,
+		"dlc": "teal"
+	},
+	{
+		"id": "k200",
+		"name": "Ogerpon",
+		"type": ["grass"],
+		"shinyLocked": true,
 		"dlc": "teal"
 	}
 ]
