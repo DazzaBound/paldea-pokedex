@@ -131,7 +131,7 @@ function saveData(){
 }
 
 async function getPkmn(){
-	let res = await fetch("https://dazzabound.github.io/paldea-pokedex/pkmn2.json");
+	let res = await fetch("https://dazzabound.github.io/paldea-pokedex/pkmn.json");
 	pkmn = await res.json();
 }
 
