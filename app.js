@@ -4,6 +4,9 @@ let filterArray = [];
 
 let skipLocked = "no";
 let skipForms = "true";
+let skipPaldea = "no";
+let skipTeal = "no";
+let skipIndigo = "no";
 
 let urlParams = new URLSearchParams(window.location.search);
 
@@ -15,6 +18,9 @@ window.onload = async function() {
 	console.log(pkmn);
 	skipLocked = localStorage.getItem("settingShiny");
 	skipForms = localStorage.getItem("settingForm");
+	skipPaldea = localStorage.getItem("settingPaldea");
+	skipTeal = localStorage.getItem("settingTeal");
+	skipIndigo = localStorage.getItem("settingIndigo");
 	pokeList();
 	loadData();
 	updateData();
@@ -27,9 +33,24 @@ window.onload = async function() {
 function pokeList(){
 	document.getElementById("pokeList").innerHTML ="";
 	pkmn.forEach(function(i){
-		if(skipLocked !== "yes" || i.shinyLocked !== true){
-			addCard(i);
+
+		if (skipPaldea === "yes" && i.dlc === undefined){
+			return;
 		}
+
+		if (skipLocked === "yes" && i.shinyLocked === true){
+			return;
+		}
+
+		if (skipTeal === "yes" && i.dlc === "teal"){
+			return;
+		}
+
+		if (skipIndigo === "yes" && i.dlc === "indigo"){
+			return;
+		}
+
+		addCard(i);
 		if(skipForms === "no" && i.alternateForm !== undefined){
 			i.alternateForm.forEach(function(i){
 				addCard(i);
@@ -45,7 +66,7 @@ function addCard(i){
 
 	let card = document.createElement("li");
 	card.id = pkmnID;
-	card.innerHTML = "<img class='image' src='icons/"+pkmnID+".png' title='#"+String(pkmnID).replace(/\D/g, '').padStart(3,'0')+"'><div class='info'><div class='name'>"+pkmnName+"</div><div class= 'types' id= 'types"+pkmnID+"'></div>";
+	card.innerHTML = "<img class='image' src='icons/"+pkmnID+".png'><div class='info'><div class='name'>"+pkmnName+"</div><div class= 'types' id= 'types"+pkmnID+"'></div>";
 	card.onclick = function(){document.getElementById(pkmnID).classList.toggle("grayOn"); updateData()};
 	card.classList.add("grayOn","container");
 	document.getElementById("pokeList").append(card);
@@ -88,6 +109,14 @@ function loadData(){
 			document.getElementById("formToggle").classList.remove("grayOn");
 			document.getElementById("formToggle").innerText = "Pokémon Forms: All";
 		}
+		if (localStorage.getItem("settingPaldea") == "yes") {
+			document.getElementById("paldeaToggle").classList.add("grayOn");
+			document.getElementById("paldeaToggle").innerText = "Paldea: Hidden";
+		}
+		if (localStorage.getItem("settingTeal") == "yes") {
+			document.getElementById("tealToggle").classList.add("grayOn");
+			document.getElementById("tealToggle").innerText = "Teal Mask: Hidden";
+		}
 	});
 }
 
@@ -102,7 +131,7 @@ function saveData(){
 }
 
 async function getPkmn(){
-	let res = await fetch("https://dazzabound.github.io/paldea-pokedex/pkmn.json");
+	let res = await fetch("https://dazzabound.github.io/paldea-pokedex/pkmn2.json");
 	pkmn = await res.json();
 }
 
@@ -137,6 +166,49 @@ function settingToggle(s){
 		}
 		localStorage.setItem("settingForm", skipForms);
 	}
+
+	if (s === "paldea") {
+		let button = document.getElementById("paldeaToggle");
+		if(skipPaldea == "yes"){
+			button.classList.remove("grayOn");
+			button.innerText = "Paldea: Shown";
+			skipPaldea = "no";
+		} else {
+			button.classList.add("grayOn");
+			button.innerText = "Paldea: Hidden";
+			skipPaldea = "yes"
+		}
+		localStorage.setItem("settingPaldea", skipPaldea);
+	}
+
+	if (s === "teal") {
+		let button = document.getElementById("tealToggle");
+		if(skipTeal == "yes"){
+			button.classList.remove("grayOn");
+			button.innerText = "Teal Mask: Shown";
+			skipTeal = "no";
+		} else {
+			button.classList.add("grayOn");
+			button.innerText = "Teal Mask: Hidden";
+			skipTeal = "yes"
+		}
+		localStorage.setItem("settingTeal", skipTeal);
+	}
+
+	if (s === "indigo") {
+		let button = document.getElementById("indigoToggle");
+		if(skipIndigo == "yes"){
+			button.classList.remove("grayOn");
+			button.innerText = "Indigo Disk: Shown";
+			skipIndigo = "no";
+		} else {
+			button.classList.add("grayOn");
+			button.innerText = "Indigo Disk: Hidden";
+			skipIndigo = "yes"
+		}
+		localStorage.setItem("settingIndigo", skipIndigo);
+	}
+
 	allFilter("on");
 	document.getElementById("checkToggle").classList.remove("grayOn");
 	document.getElementById("uncheckToggle").classList.remove("grayOn");

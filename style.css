@@ -463,6 +463,9 @@ footer.darkMode{
 }
 #shinyLockToggle{background: #907200;}
 #formToggle, #clearData{background: red;}
+#paldeaToggle{background: purple}
+#tealToggle{background: teal;}
+#indigoToggle{background: indigo}
 
 #settingsContainer{
 	display: grid;
