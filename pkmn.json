@@ -847,6 +847,12 @@
 			"id": "138b",
 			"name": "Basculin (B)",
 			"type": ["water"]
+			},
+			{
+			"id": "138w",
+			"name": "Basculin (W)",
+			"type": ["water"],
+			"dlc": "teal"
 			}
 		]
 	},
@@ -2683,13 +2689,27 @@
 		"id": "k76",
 		"name": "Poltchageist",
 		"type": ["grass","ghost"],
-		"dlc": "teal"
+		"dlc": "teal",
+		"alternateForm": [
+			{
+			"id": "k76a",
+			"name": "Poltchageist (A)",
+			"type": ["grass","ghost"]
+			}
+		]
 	},
 	{
 		"id": "k77",
 		"name": "Sinistcha",
 		"type": ["grass","ghost"],
-		"dlc": "teal"
+		"dlc": "teal",
+		"alternateForm": [
+			{
+			"id": "k77a",
+			"name": "Sinistcha (A)",
+			"type": ["grass","ghost"]
+			}
+		]
 	},
 	{
 		"id": "k80",
