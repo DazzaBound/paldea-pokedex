@@ -847,6 +847,12 @@
 			"id": "138b",
 			"name": "Basculin (B)",
 			"type": ["water"]
+			},
+			{
+			"id": "138w",
+			"name": "Basculin (W)",
+			"type": ["water"],
+			"dlc": "teal"
 			}
 		]
 	},
@@ -2683,13 +2689,27 @@
 		"id": "k76",
 		"name": "Poltchageist",
 		"type": ["grass","ghost"],
-		"dlc": "teal"
+		"dlc": "teal",
+		"alternateForm": [
+			{
+			"id": "k76a",
+			"name": "Poltchageist (A)",
+			"type": ["grass","ghost"]
+			}
+		]
 	},
 	{
 		"id": "k77",
 		"name": "Sinistcha",
 		"type": ["grass","ghost"],
-		"dlc": "teal"
+		"dlc": "teal",
+		"alternateForm": [
+			{
+			"id": "k77a",
+			"name": "Sinistcha (A)",
+			"type": ["grass","ghost"]
+			}
+		]
 	},
 	{
 		"id": "k80",
@@ -2773,7 +2793,7 @@
 	},
 	{
 		"id": "k108",
-		"name": "Lotad",
+		"name": "Probopass",
 		"type": ["rock","steel"],
 		"dlc": "teal"
 	},
@@ -3030,5 +3050,1100 @@
 		"type": ["grass"],
 		"shinyLocked": true,
 		"dlc": "teal"
+	},
+	{
+		"id": "b001",
+		"name": "Doduo",
+		"type": ["normal","flying"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b002",
+		"name": "Dodrio",
+		"type": ["normal","flying"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b003",
+		"name": "Exeggcute",
+		"type": ["grass","psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b004",
+		"name": "Exeggutor",
+		"type": ["grass","psychic"],
+		"dlc": "indigo",
+		"alternateForm": [
+			{
+			"id": "b004a",
+			"name": "Exeggutor (A)",
+			"type": ["grass","dragon"]
+			}
+		]
+	},
+	{
+		"id": "b005",
+		"name": "Rhyhorn",
+		"type": ["ground","rock"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b006",
+		"name": "Rhydon",
+		"type": ["ground","rock"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b007",
+		"name": "Rhyperior",
+		"type": ["ground","rock"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b010",
+		"name": "Elekid",
+		"type": ["electric"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b011",
+		"name": "Electabuzz",
+		"type": ["electric"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b012",
+		"name": "Electivire",
+		"type": ["electric"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b013",
+		"name": "Magby",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b014",
+		"name": "Magmar",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b015",
+		"name": "Magmortar",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b021",
+		"name": "Kleavor",
+		"type": ["rock","bug"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b022",
+		"name": "Tauros (K)",
+		"type": ["normal"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b023",
+		"name": "Blitzle",
+		"type": ["electric"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b024",
+		"name": "Zebstrika",
+		"type": ["electric"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b040",
+		"name": "Smeargle",
+		"type": ["normal"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b042",
+		"name": "Milcery",
+		"type": ["fairy"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b043",
+		"name": "Alcremie",
+		"type": ["fairy"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b044",
+		"name": "Trapinch",
+		"type": ["ground"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b045",
+		"name": "Vibrava",
+		"type": ["ground","dragon"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b046",
+		"name": "Flygon",
+		"type": ["ground","dragon"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b047",
+		"name": "Pikipek",
+		"type": ["normal","flying"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b048",
+		"name": "Trumbeak",
+		"type": ["normal","flying"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b049",
+		"name": "Toucannon",
+		"type": ["normal","flying"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b050",
+		"name": "Tentacool",
+		"type": ["water","poison"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b051",
+		"name": "Tentacruel",
+		"type": ["water","poison"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b052",
+		"name": "Horsea",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b053",
+		"name": "Seaking",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b054",
+		"name": "Kingdra",
+		"type": ["water","dragon"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b056",
+		"name": "Cottonee",
+		"type": ["grass","fairy"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b057",
+		"name": "Whimsicott",
+		"type": ["grass","fairy"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b058",
+		"name": "Comfey",
+		"type": ["fairy"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b062",
+		"name": "Oddish",
+		"type": ["grass","poison"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b063",
+		"name": "Gloom",
+		"type": ["grass","poison"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b064",
+		"name": "Vileplume",
+		"type": ["grass","poison"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b065",
+		"name": "Bellossom",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b066",
+		"name": "Diglett (A)",
+		"type": ["ground","steel"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b067",
+		"name": "Dugtrio (A)",
+		"type": ["ground","steel"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b068",
+		"name": "Grimer (A)",
+		"type": ["poison","dark"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b069",
+		"name": "Muk (A)",
+		"type": ["poison","dark"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b075",
+		"name": "Slowpoke (G)",
+		"type": ["psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b076",
+		"name": "Slowbro (G)",
+		"type": ["poison","psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b077",
+		"name": "Slowking (G)",
+		"type": ["poison","psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b078",
+		"name": "Chinchou",
+		"type": ["water","electric"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b079",
+		"name": "Lanturn",
+		"type": ["water","electric"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b080",
+		"name": "Inkay",
+		"type": ["dark","psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b081",
+		"name": "Malamar",
+		"type": ["dark","psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b090",
+		"name": "Dewpider",
+		"type": ["water","bug"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b091",
+		"name": "Araquanid",
+		"type": ["water","bug"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b092",
+		"name": "Tyrogue",
+		"type": ["fighting"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b093",
+		"name": "Hitmonlee",
+		"type": ["fighting"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b094",
+		"name": "Hitmonchan",
+		"type": ["fighting"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b095",
+		"name": "Hitmontop",
+		"type": ["fighting"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b096",
+		"name": "Geodude (A)",
+		"type": ["rock","electric"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b097",
+		"name": "Graveler (A)",
+		"type": ["rock","electric"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b098",
+		"name": "Goldem (A)",
+		"type": ["rock","electric"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b099",
+		"name": "Drillbur",
+		"type": ["ground","steel"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b100",
+		"name": "Excadrill",
+		"type": ["ground","steel"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b104",
+		"name": "Espurr",
+		"type": ["psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b105",
+		"name": "Meowstic",
+		"type": ["psychic"],
+		"dlc" : "indigo",
+		"alternateForm": [
+			{
+			"id": "b105f",
+			"name": "Meowstic F",
+			"type": ["psychic"]
+			}
+		]
+	},
+	{
+		"id": "b106",
+		"name": "Minior",
+		"type": ["rock","flying"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b107",
+		"name": "Cranidos",
+		"type": ["rock"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b108",
+		"name": "Rampardos",
+		"type": ["rock"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b109",
+		"name": "Shieldon",
+		"type": ["rock","steel"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b110",
+		"name": "Bastiodon",
+		"type": ["rock","steel"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b111",
+		"name": "Minccino",
+		"type": ["normal"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b112",
+		"name": "Cinccino",
+		"type": ["normal"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b113",
+		"name": "Skarmory",
+		"type": ["steel","flying"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b119",
+		"name": "Plusle",
+		"type": ["electric"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b120",
+		"name": "Minum",
+		"type": ["electric"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b121",
+		"name": "Scraggy",
+		"type": ["dark","fighting"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b122",
+		"name": "Scrafty",
+		"type": ["dark","fighting"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b123",
+		"name": "Golett",
+		"type": ["ground","ghost"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b124",
+		"name": "Golurk",
+		"type": ["ground","ghost"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b130",
+		"name": "Porygon",
+		"type": ["normal"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b131",
+		"name": "Porygon2",
+		"type": ["normal"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b132",
+		"name": "Porygon-Z",
+		"type": ["normal"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b133",
+		"name": "Joltik",
+		"type": ["bug","electric"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b134",
+		"name": "Galvantula",
+		"type": ["bug","electric"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b137",
+		"name": "Beldum",
+		"type": ["steel","psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b138",
+		"name": "Metang",
+		"type": ["steel","psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b139",
+		"name": "Metagross",
+		"type": ["steel","psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b143",
+		"name": "Seel",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b144",
+		"name": "Dewgong",
+		"type": ["water","ice"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b145",
+		"name": "Lapras",
+		"type": ["water","ice"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b146",
+		"name": "Qwilfish (H)",
+		"type": ["dark","poison"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b147",
+		"name": "Overqwil",
+		"type": ["dark","poison"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b148",
+		"name": "Solosis",
+		"type": ["psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b149",
+		"name": "Duosion",
+		"type": ["psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b150",
+		"name": "Reuniclus",
+		"type": ["psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b151",
+		"name": "Snubbull",
+		"type": ["fairy"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b152",
+		"name": "Granbull",
+		"type": ["fairy"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b155",
+		"name": "Sandshrew (A)",
+		"type": ["ice","steel"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b156",
+		"name": "Sandslash (A)",
+		"type": ["ice","steel"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b157",
+		"name": "Vulpix (A)",
+		"type": ["ice"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b158",
+		"name": "Ninetails (A)",
+		"type": ["ice","fairy"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b161",
+		"name": "Duraludon",
+		"type": ["steel","dragon"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b162",
+		"name": "Archaludon",
+		"type": ["steel","dragon"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b163",
+		"name": "Hydrapple",
+		"type": ["grass","dragon"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b164",
+		"name": "Bulbasaur",
+		"type": ["grass","poison"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b165",
+		"name": "Ivysaur",
+		"type": ["grass","poison"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b166",
+		"name": "Venusaur",
+		"type": ["grass","poison"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b167",
+		"name": "Charmander",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b168",
+		"name": "Charmeleon",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b169",
+		"name": "Charizard",
+		"type": ["fire","flying"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b170",
+		"name": "Squirtle",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b171",
+		"name": "Wartortle",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b172",
+		"name": "Blastoise",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b173",
+		"name": "Chikorita",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b174",
+		"name": "Bayleaf",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b175",
+		"name": "Meganium",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b176",
+		"name": "Cyndaquil",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b177",
+		"name": "Quilava",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b178",
+		"name": "Typhlosion",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b179",
+		"name": "Totodile",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b180",
+		"name": "Croconaw",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b181",
+		"name": "Feraligatr",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b182",
+		"name": "Treecko",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b183",
+		"name": "Grovyle",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b184",
+		"name": "Sceptile",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b185",
+		"name": "Torchic",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b186",
+		"name": "Combusken",
+		"type": ["fire","fighting"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b187",
+		"name": "Blaziken",
+		"type": ["fire","fighting"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b188",
+		"name": "Mudkip",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b189",
+		"name": "Marshtomp",
+		"type": ["water","ground"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b190",
+		"name": "Swampert",
+		"type": ["water","ground"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b191",
+		"name": "Turtwig",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b192",
+		"name": "Grotle",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b193",
+		"name": "Torterra",
+		"type": ["grass","ground"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b194",
+		"name": "Chimchar",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b195",
+		"name": "Monferno",
+		"type": ["fire","fighting"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b196",
+		"name": "Infernape",
+		"type": ["fire","fighting"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b197",
+		"name": "Piplup",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b198",
+		"name": "Prinplup",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b199",
+		"name": "Empoleon",
+		"type": ["water","steel"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b200",
+		"name": "Snivy",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b201",
+		"name": "Servine",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b202",
+		"name": "Serperior",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b203",
+		"name": "Tepig",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b204",
+		"name": "Pignite",
+		"type": ["fire","fighting"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b205",
+		"name": "Emboar",
+		"type": ["fire","fighting"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b206",
+		"name": "Oshawott",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b207",
+		"name": "Dewott",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b208",
+		"name": "Samurott",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b209",
+		"name": "Chespin",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b210",
+		"name": "Quilladin",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b211",
+		"name": "Chesnaught",
+		"type": ["grass","fighting"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b212",
+		"name": "Fennekin",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b213",
+		"name": "Braxien",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b214",
+		"name": "Delphox",
+		"type": ["fire","psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b215",
+		"name": "Froakie",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b216",
+		"name": "Frogadier",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b217",
+		"name": "Greninja",
+		"type": ["water","dark"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b218",
+		"name": "Rowlet",
+		"type": ["grass","flying"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b219",
+		"name": "Dartrix",
+		"type": ["grass","flying"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b220",
+		"name": "Decidueye",
+		"type": ["grass","flying"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b221",
+		"name": "Litten",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b222",
+		"name": "Torracat",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b223",
+		"name": "Incineroar",
+		"type": ["fire","dark"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b224",
+		"name": "Popplio",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b225",
+		"name": "Brionne",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b226",
+		"name": "Primarina",
+		"type": ["water","fairy"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b227",
+		"name": "Grookey",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b228",
+		"name": "Thwakey",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b229",
+		"name": "Rillaboom",
+		"type": ["grass"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b230",
+		"name": "Scorbunny",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b231",
+		"name": "Raboot",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b232",
+		"name": "Cinderace",
+		"type": ["fire"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b233",
+		"name": "Sobble",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b234",
+		"name": "Drizzile",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b235",
+		"name": "Inteleon",
+		"type": ["water"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b236",
+		"name": "Gouging Fire",
+		"type": ["fire","dragon"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b237",
+		"name": "Raging Bolt",
+		"type": ["electric","dragon"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b238",
+		"name": "Iron Crown",
+		"type": ["steel","psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b239",
+		"name": "Iron Boulder",
+		"type": ["rock","psychic"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b240",
+		"name": "Terapagos",
+		"type": ["normal"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b241",
+		"name": "Walking Wake",
+		"type": ["water","dragon"],
+		"dlc": "indigo"
+	},
+	{
+		"id": "b242",
+		"name": "Iron Leaves",
+		"type": ["grass","psychic"],
+		"dlc": "indigo"
 	}
+	
 ]
