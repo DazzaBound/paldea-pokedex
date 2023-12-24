@@ -4107,42 +4107,49 @@
 		"id": "b236",
 		"name": "Gouging Fire",
 		"type": ["fire","dragon"],
+		"shinyLocked": true,
 		"dlc": "indigo"
 	},
 	{
 		"id": "b237",
 		"name": "Raging Bolt",
 		"type": ["electric","dragon"],
+		"shinyLocked": true,
 		"dlc": "indigo"
 	},
 	{
 		"id": "b238",
 		"name": "Iron Crown",
 		"type": ["steel","psychic"],
+		"shinyLocked": true,
 		"dlc": "indigo"
 	},
 	{
 		"id": "b239",
 		"name": "Iron Boulder",
 		"type": ["rock","psychic"],
+		"shinyLocked": true,
 		"dlc": "indigo"
 	},
 	{
 		"id": "b240",
 		"name": "Terapagos",
 		"type": ["normal"],
+		"shinyLocked": true,
 		"dlc": "indigo"
 	},
 	{
 		"id": "b241",
 		"name": "Walking Wake",
 		"type": ["water","dragon"],
+		"shinyLocked": true,
 		"dlc": "indigo"
 	},
 	{
 		"id": "b242",
 		"name": "Iron Leaves",
 		"type": ["grass","psychic"],
+		"shinyLocked": true,
 		"dlc": "indigo"
 	}
 	
