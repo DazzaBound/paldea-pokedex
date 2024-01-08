@@ -3447,24 +3447,28 @@
 		"id": "b107",
 		"name": "Cranidos",
 		"type": ["rock"],
+		"exclusive": "s",
 		"dlc": "indigo"
 	},
 	{
 		"id": "b108",
 		"name": "Rampardos",
 		"type": ["rock"],
+		"exclusive": "s",
 		"dlc": "indigo"
 	},
 	{
 		"id": "b109",
 		"name": "Shieldon",
 		"type": ["rock","steel"],
+		"exclusive": "v",
 		"dlc": "indigo"
 	},
 	{
 		"id": "b110",
 		"name": "Bastiodon",
 		"type": ["rock","steel"],
+		"exclusive": "v",
 		"dlc": "indigo"
 	},
 	{
@@ -3633,24 +3637,28 @@
 		"id": "b155",
 		"name": "Sandshrew (A)",
 		"type": ["ice","steel"],
+		"exclusive": "v",
 		"dlc": "indigo"
 	},
 	{
 		"id": "b156",
 		"name": "Sandslash (A)",
 		"type": ["ice","steel"],
+		"exclusive": "v",
 		"dlc": "indigo"
 	},
 	{
 		"id": "b157",
 		"name": "Vulpix (A)",
 		"type": ["ice"],
+		"exclusive": "s",
 		"dlc": "indigo"
 	},
 	{
 		"id": "b158",
 		"name": "Ninetails (A)",
 		"type": ["ice","fairy"],
+		"exclusive": "s",
 		"dlc": "indigo"
 	},
 	{
@@ -4107,6 +4115,7 @@
 		"id": "b236",
 		"name": "Gouging Fire",
 		"type": ["fire","dragon"],
+		"exclusive": "s",
 		"shinyLocked": true,
 		"dlc": "indigo"
 	},
@@ -4114,6 +4123,7 @@
 		"id": "b237",
 		"name": "Raging Bolt",
 		"type": ["electric","dragon"],
+		"exclusive": "s",
 		"shinyLocked": true,
 		"dlc": "indigo"
 	},
@@ -4121,6 +4131,7 @@
 		"id": "b238",
 		"name": "Iron Crown",
 		"type": ["steel","psychic"],
+		"exclusive": "v",
 		"shinyLocked": true,
 		"dlc": "indigo"
 	},
@@ -4128,6 +4139,7 @@
 		"id": "b239",
 		"name": "Iron Boulder",
 		"type": ["rock","psychic"],
+		"exclusive": "v",
 		"shinyLocked": true,
 		"dlc": "indigo"
 	},
