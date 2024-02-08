@@ -17,13 +17,14 @@ button,input {
     border-radius: none;
     outline: 0;
 	overflow: visible;
+	color: #ddd;
 }
 body {
 	color: #444;
 	font-size: 28px;
 	font-family: "Nunito";
 	font-weight: 700;
-	background: #dbf1dc;
+	background: #36393f;
 	margin: auto;
 	max-width: 960px;
 	width: 100%;
@@ -33,32 +34,21 @@ body.fixed {
 	overflow: hidden;
 	touch-action: none;
 }
-body.darkMode {
-	background: #36393f;
-}
+
 header, footer {
 	z-index: 2;
-	background: #dbf1dc;
-	color: #444;
+	color: #dddddd;
 }
 header {
 	position: sticky;
 	top: 0;
 	display: flex;
 	padding: 5px 20px 5px 20px;
-	background: white;
-	box-shadow: 0 2px 0 0 rgba(0,0,0,0.15);
+	background: #26292e;
+	box-shadow: 0 2px 0 0 rgba(0,0,0,0.4);
 	border-radius: 0 0 10px 10px;
 	justify-content: space-between;
 	align-items: center;
-}
-header.darkMode, #credit.darkMode {
-	background: #26292e;
-	color: #dddddd;
-	box-shadow: 0 2px 0 0 rgba(0,0,0,0.4);
-}
-header.darkMode input {
-	color: #ddd;
 }
 #searchBar, #shareCont{
 	display: flex;
@@ -108,7 +98,7 @@ header.darkMode input {
 	position: absolute;
 	display: none;
 	border-radius: 10px;
-	background: rgba(0, 0, 0, 0.15);
+	background: rgba(255,255,255,0.15);
 	transition: background-color 0.3s;
 	right: 40px;
 	cursor: pointer;
@@ -117,7 +107,7 @@ header.darkMode input {
 	display: block;
 }
 #clearSearch:hover{
-	background: rgba(0, 0, 0, 0.3);
+	background: rgba(255,255,255,0.3);
 }
 #searchButton, #shareButton {
 	position: relative;
@@ -130,22 +120,12 @@ header.darkMode input {
 	background: #eee;
 	border-radius: 0 8px 8px 0;
 }
-header.darkMode #pokeSearch, header.darkMode #searchButton, #menuContents.darkMode #shareCode, #menuContents.darkMode #shareButton {
+#pokeSearch, #searchButton, #menuContents #shareCode, #menuContents #shareButton {
 	background:#36393f;
 	color: #ddd;
 }
 header svg {
-	stroke: #444;
-}
-header.darkMode svg {
 	stroke: #ddd;
-}
-header.darkMode #clearSearch {
-	background: rgba(255, 255, 255, 0.15);
-	color: #ddd;
-}
-header.darkMode #clearSearch:hover {
-	background: rgba(255,255,255,0.3);
 }
 #menuButton{
 	display: flex;
@@ -163,7 +143,7 @@ header.darkMode #clearSearch:hover {
 	display: inline-block;
 	position: relative;
 	height: 2px;
-	background: #444;
+	background: #ddd;
 	width: 100%;
 	border-radius: 1px;
 }
@@ -172,13 +152,10 @@ header.darkMode #clearSearch:hover {
 	display: inline-block;
 	position: absolute;
 	height: 2px;
-	background: #444;
+	background: #ddd;
 	width: 100%;
 	border-radius: 1px;
 	transition: transform 0.2s ease;
-}
-header.darkMode #menuButton span, header.darkMode #menuButton span::before, header.darkMode #menuButton span::after{
-	background: #ddd;
 }
 #menuButton span::before {
     transform: translate(-50%,-8px)
@@ -201,7 +178,7 @@ header.darkMode #menuButton span, header.darkMode #menuButton span::before, head
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.7);
 	backdrop-filter: blur(2px);
 	opacity: 0;
 	visibility: hidden;
@@ -218,9 +195,6 @@ header.darkMode #menuButton span, header.darkMode #menuButton span::before, head
 }
 #dialogueCont{
 	z-index: 5;
-}
-body.darkMode #menuContainer, body.darkMode #boxesContainer, body.darkMode #shareContainer {
-	background-color: rgba(0, 0, 0, 0.7);
 }
 #menuContainer.open, #boxesContainer.open, #shareContainer.open, #dialogueCont.open{
 	visibility: visible;
@@ -281,6 +255,7 @@ body.darkMode #menuContainer, body.darkMode #boxesContainer, body.darkMode #shar
 }
 #menuOptions{
 	display:flex;
+	justify-content: flex-end;
 	align-items: center;
 }
 #menuClose{
@@ -295,7 +270,7 @@ body.darkMode #menuContainer, body.darkMode #boxesContainer, body.darkMode #shar
 	border-radius: 50%;
 }
 #menuClose:hover{
-	background: #ddd;
+	background: rgba(255, 255, 255, 0.15);
 }
 #menuContents{
 	position: absolute;
@@ -307,7 +282,8 @@ body.darkMode #menuContainer, body.darkMode #boxesContainer, body.darkMode #shar
 	flex-flow: column;
 	width: 260px;
 	float: right;
-	background: #f4f4f4;
+	background: #26292e;
+	color: #ddd;
 	padding: 20px 20px 20px 20px;
 	overflow: scroll;
 	scrollbar-width: none;
@@ -320,21 +296,11 @@ body.darkMode #menuContainer, body.darkMode #boxesContainer, body.darkMode #shar
 #menuContainer.open #menuContents{
 	transform: translateX(0);
 }
-#menuContents.darkMode{
-	background: #26292e;
-	color: #ddd;
-}
-#menuContents.darkMode #menuClose:hover{
-	background: rgba(255, 255, 255, 0.15);
-}
 footer{
 	position: fixed;
 	max-width: inherit;
 	width: inherit;
 	bottom: 0;
-}
-footer.darkMode{
-	background: #36393f;
 }
 #title{
 	align-self: flex-end;
@@ -346,26 +312,21 @@ footer.darkMode{
 	padding: 2px 2px 2px 10px;
 	border-radius: 10px 10px 0 0;
 	box-shadow: 0 2px 0 0 rgba(0,0,0,0.15);
-	background: white;
+	background: #26292e;
+	color: #dddddd;
 	justify-content: center;
 	align-items: center;
 }
 #credit a{
-	color: #444;
-}
-#credit.darkMode a{
 	color: #ddd;
 }
 #menuContents svg{
 	margin-right: 5px;
-	stroke: #444;
+	stroke: #ddd;
 	transition: stroke 0.3s ease-in;
 }
 #toggleIcon {
 	margin-left: auto;
-}
-#menuContents.darkMode svg {
-	stroke: #ddd;
 }
 #themeToggle {
 	margin-right: 8px;
@@ -389,14 +350,6 @@ footer.darkMode{
 	border-radius: 50%;
 	transition: left 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
 }
-#themeToggle.darkMode {
-	background: #ddd;
-	border-color: black;
-}
-#themeToggle.darkMode::after {
-	left: 16px;
-	background: #26292e;
-}
 #pokeList{
 	position: relative;
 	margin: 5px 10px 25px 10px;
@@ -407,11 +360,6 @@ footer.darkMode{
 }
 #pokeList::after{
 	flex: auto;
-}
-#pokeList.darkMode li {
-	background: #4c6857;
-	box-shadow: 0 2px 0 0 rgba(0,0,0,0.4), inset 0 0 0 2px rgb(82, 158, 63);
-	color: #ddd;
 }
 .exc {
 	position: absolute;
@@ -480,9 +428,10 @@ footer.darkMode{
 	display: flex;
 	flex-direction: column;
 	width: 100px;
-	background: #feffde;
+	color: #ddd;
+	background: #4c6857;
 	border-radius: 10px;
-	box-shadow: 0 2px 0 0 rgba(0,0,0,0.15), inset 0 0 0 2px gold;
+	box-shadow: 0 2px 0 0 rgba(0,0,0,0.4), inset 0 0 0 2px rgb(82, 158, 63);
 	padding: 5px 4px 5px 4px;
 	filter: grayscale(0%);
 	transition: background-color 0.5s ease, box-shadow 0.5s ease;
@@ -552,10 +501,6 @@ footer.darkMode{
 }
 
 .grayOn{
-	background:white !important;
-	box-shadow: 0 2px 0 0 rgba(0,0,0,0.15);
-}
-#pokeList.darkMode li.grayOn{
 	background: rgba(255,255,255,.15) !important;
 	box-shadow: 0 2px 0 0 rgba(0,0,0,0.4);
 }
