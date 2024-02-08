@@ -172,7 +172,7 @@ header svg {
 #menuButton:hover span::after {
     transform: translate(-50%,12px)
 }
-#menuContainer, #boxesContainer, #shareContainer, #dialogueCont {
+#menuContainer, #shareContainer, #dialogueCont {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -188,7 +188,7 @@ header svg {
 #shareContainer{
 	display: inline;
 }
-#boxesContainer, #shareContainer, #dialogueCont {
+#shareContainer, #dialogueCont {
 	display: flex;
 	justify-content: center;
 	z-index: 1;
@@ -196,7 +196,7 @@ header svg {
 #dialogueCont{
 	z-index: 5;
 }
-#menuContainer.open, #boxesContainer.open, #shareContainer.open, #dialogueCont.open{
+#menuContainer.open, #shareContainer.open, #dialogueCont.open{
 	visibility: visible;
 	opacity: 1;
 }
