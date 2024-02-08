@@ -486,50 +486,6 @@ function startSearch() {
 	});
 }
 
-
-// -------- BOX BUILDER --------- //
-
-function buildBoxes() {
-	closeMenu();
-	document.getElementById("boxesContainer").classList.add("open");
-	document.body.classList.add("fixed");
-	document.getElementById("boxDisplay").innerHTML = "";
-
-	let boxLables = ["#001 - #030","#031 - #060","#061 - #090","#091 - #120","#121 - #150","#151 - #180","#181 - #210","#211 - #240","#241 - #270","#271 - #300","#301 - #330","#331 - #360","#361 - #390","#391 - #400"]
-
-	for (let i = 1; i <= 400 ; i++) {
-		
-		if (i && ((i-1) % 30 === 0)){
-
-			let box = document.createElement("div");
-			box.id = "box"+(Math.ceil(i/30));
-			box.classList.add("gridParent");
-			document.getElementById("boxDisplay").appendChild(box);
-			let title = document.createElement("span");
-			box.classList.add("gridParent");
-			title.classList.add("boxTitle");
-			title.innerText = boxLables[Math.ceil(i/30)-1];
-			document.getElementById("box"+Math.ceil(i/30)).appendChild(title);
-
-		}
-
-		let currentBox = "box"+(Math.ceil(i/30));
-		if (localStorage.getItem("saveID"+i) == "false") {
-			document.getElementById(currentBox).innerHTML += "<div><img src='icons/"+pkmn[i-1].id+".png'></div>";
-		} else {
-			document.getElementById(currentBox).innerHTML += "<div></div>";
-		}
-
-	}
-
-}
-
-function closeBoxes() {
-	document.getElementById("boxesContainer").classList.remove("open");
-	document.body.classList.remove("fixed");
-	document.getElementById("boxDisplay").innerHTML = "";
-}
-
 // -------- SHARE VIEW --------- //
 
 function buildShare() {
