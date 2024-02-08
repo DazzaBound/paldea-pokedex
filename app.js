@@ -117,6 +117,10 @@ function loadData(){
 			document.getElementById("tealToggle").classList.add("grayOn");
 			document.getElementById("tealToggle").innerText = "Teal Mask: Hidden";
 		}
+		if (localStorage.getItem("settingIndigo") == "yes") {
+			document.getElementById("indigoToggle").classList.add("grayOn");
+			document.getElementById("indigoToggle").innerText = "Teal Mask: Hidden";
+		}
 	});
 }
 
@@ -131,7 +135,7 @@ function saveData(){
 }
 
 async function getPkmn(){
-	let res = await fetch("https://dazzabound.github.io/paldea-pokedex/pkmn.json");
+	let res = await fetch("https://dazzabound.github.io/paldea-pokedex/pkmn2.json");
 	pkmn = await res.json();
 }
 
@@ -581,47 +585,3 @@ function closeShare() {
 	document.body.classList.remove("fixed");
 	document.getElementById("shareDisplay").innerHTML = "";
 }
-
-// -------- THEME SELECTOR --------- //
-
-let theme = localStorage.getItem("theme");
-
-function enableDarkMode() {
-	document.body.classList.add("darkMode");
-	document.getElementById("header").classList.add("darkMode");
-	document.getElementById("pokeList").classList.add("darkMode");
-	document.getElementById("footer").classList.add("darkMode");
-	document.getElementById("credit").classList.add("darkMode");
-	document.getElementById("themeToggle").classList.add("darkMode");
-	document.getElementById("toggleIcon").classList.add("darkMode");
-	document.getElementById("menuContents").classList.add("darkMode");
-	localStorage.setItem("theme", "dark");
-}
-
-function disableDarkMode() {
-	document.body.classList.remove("darkMode");
-	document.getElementById("header").classList.remove("darkMode");
-	document.getElementById("pokeList").classList.remove("darkMode");
-	document.getElementById("footer").classList.remove("darkMode");
-	document.getElementById("credit").classList.remove("darkMode");
-	document.getElementById("themeToggle").classList.remove("darkMode");
-	document.getElementById("toggleIcon").classList.remove("darkMode");
-	document.getElementById("menuContents").classList.remove("darkMode");
-	localStorage.setItem("theme", "light");
-}
-
-if (theme === "dark") {
-	enableDarkMode();
-}
-
-document.getElementById("themeToggle").addEventListener("click", function(){
-
-	theme = localStorage.getItem("theme");
-
-	if (theme !== "dark") {
-		enableDarkMode();
-	} else {
-		disableDarkMode();
-	}
-
-});
